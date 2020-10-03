@@ -6,25 +6,36 @@ public class PlayerController : MonoBehaviour
 {
     
     public GameObject player;
-    // public float speed;
-    // public float strafeSpeed;
-    // //public RigidBody hips;
+    public float speed;
+    public float strafeSpeed;
+    public float sprintSpeed;
+    public Rigidbody hips;
 
-    // public force JumpForce;
+    public float JumpForce;
 
-    void start()
-    {
-        
-
-    }
+    public bool isGrounded;
 
     void Update ()
     {
-        if (Input.GetKey(KeyCode.W))
-        {
-            Debug.Log("Running");
-            player.GetComponent<Animation>().Play("Run");
 
+        
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W))
+        {
+            //Debug.Log("Running");
+            
+            player.GetComponent<Animation>().Play("Running");
+            player.transform.Translate(Vector3.forward * sprintSpeed * Time.deltaTime);
+            
+        }else if (Input.GetKey(KeyCode.W))
+        {
+            Debug.Log("ruuuun");
+            player.GetComponent<Animation>().Play("Walking");
+
+            player.transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        }else if (!Input.anyKey){
+            player.GetComponent<Animation>().Play("Breathing_Idle");
         }
+
+            
     }
 }
