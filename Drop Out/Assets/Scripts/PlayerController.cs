@@ -32,8 +32,8 @@ public class PlayerController : MonoBehaviour
             player.GetComponent<Animation>().Play("Walking");
 
             player.transform.Translate(Vector3.forward * speed * Time.deltaTime);
-        }else if (!Input.anyKey){
-            player.GetComponent<Animation>().Play("Breathing_Idle");
+        }else{
+            player.GetComponent<Animation>().Play("Warrior_Idle");
         }
 
             
