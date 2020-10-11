@@ -8,11 +8,11 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public float turnSpeed;
     public float jumpForce;
-    private Animator anim = null;
+    private Animator anim = null; 
     private Rigidbody rb = null;
     private Rigidbody[] rigBones = null;
-    private bool isGrounded;
-    private bool isjumping = false;
+    public bool isGrounded = true;
+    private bool isjumping;
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -32,14 +32,14 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-
-        // if (rb.velocity.y <= 0){
-        //     isGrounded = true;
-        //     Debug.Log(rb.velocity.y);
-        // }else{
-        //     isGrounded = false;    
-        // }
+        Debug.Log(isGrounded);
+        // float hor = Input.GetAxis("Horizontal");
+        // float ver = Input.GetAxis("Vertical");
+        //  Vector3 move = (hor * moveSpeed * Time.deltaTime) + (ver * moveSpeed * Time.deltaTime);
+        //  transform.Translate(move);
+        float fallVelocity = rb.velocity.z;
         if (Input.GetKey(KeyCode.W)){
+            //rb.velocity = transform.forward * moveSpeed * Time.deltaTime;
             transform.Translate(Vector3.forward * moveSpeed *Time.deltaTime);
             anim.SetBool("Running", true);
         }else{
@@ -55,11 +55,12 @@ public class PlayerController : MonoBehaviour
         // if (isGrounded){
             
 
-            if (Input.GetKeyDown(KeyCode.Space)){
-                isjumping = true;
-                rb.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
-                anim.SetTrigger("Jump");
-            }
+        if (Input.GetKeyDown(KeyCode.Space)){
+            isjumping = true;
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
+            anim.SetTrigger("Jump");
+                
+        }
         // }
         
 
@@ -68,18 +69,20 @@ public class PlayerController : MonoBehaviour
             anim.enabled = true;
             TurnOffRagdoll();
         }
+
+        rb.velocity += Vector3.down * fallVelocity;
     }
 
     private void OnCollisionEnter(Collision collision){
         isjumping = false;
     }
-    private void OnCollisionExit(Collision collision){
-        if (isjumping == false){
-            anim.enabled = false;
-            TurnOnRagdoll();
-        }
+    // private void OnCollisionExit(Collision collision){
+    //     if (isjumping == false){
+    //         anim.enabled = false;
+    //         TurnOnRagdoll();
+    //     }
         
-    }
+    // }
     private void TurnOffRagdoll()
     {
         foreach (Rigidbody r in rigBones){

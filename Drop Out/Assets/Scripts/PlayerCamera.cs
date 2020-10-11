@@ -4,27 +4,40 @@ using UnityEngine;
 
 public class PlayerCamera : MonoBehaviour
 {
-    public float MouseSensitivity = 200f;
+    private Vector3 cameraOffset;
 
-    public Transform playerbody;
-    float xRotation = 0f;
-    // Start is called before the first frame update
+    public Transform playerTransform;
+
+    [Range (0.01f, 1.0f)]
+    public float smoothFactor = 0.5f;
+    public bool lookAtPlayer = false;
+
+    public bool rotateAroundPlayer = true;
+    public float rotateSpeed = 5.0f;
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        cameraOffset = transform.position - playerTransform.position;
+
     }
-    
-    // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        float mouseX = Input.GetAxis("Mouse X") * MouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * MouseSensitivity * Time.deltaTime;
 
-        xRotation -= mouseY;
-        // xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        if (rotateAroundPlayer)
+        {
+            Quaternion turnAngle = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * rotateSpeed, Vector3.up);
 
-        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        playerbody.Rotate(Vector3.up * mouseX);
-        
+            cameraOffset = turnAngle * cameraOffset;
+        }
+       Vector3 newPos = playerTransform.position + cameraOffset;
+
+       transform.position = Vector3.Slerp(transform.position, newPos, smoothFactor);
+
+       if (lookAtPlayer || rotateAroundPlayer)
+       {
+           transform.LookAt(playerTransform);
+       }
     }
+
+
 }
+

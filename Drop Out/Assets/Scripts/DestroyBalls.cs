@@ -5,7 +5,7 @@ using UnityEngine;
 public class DestroyBalls : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject gameObject, gameObject1, gameObject2;
+    public GameObject gameObjectt, gameObject1, gameObject2;
     
     // Update is called once per frame
     void Update()
@@ -14,10 +14,10 @@ public class DestroyBalls : MonoBehaviour
     }
     void OnTriggerEnter(Collider other) {
         //var gone = gameObject + gameObject1 + gameObject2;
-        if (gameObject != null)
+        if (gameObjectt != null)
         {    
             // Do something  
-            Destroy(gameObject);
+            Destroy(gameObjectt);
         }
         if (gameObject1 != null)
         {    
