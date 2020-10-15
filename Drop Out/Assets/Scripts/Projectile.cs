@@ -8,9 +8,13 @@ public class Projectile : MonoBehaviour
     public float speed= 5f;
     public float range = 5f;
     private Vector3 spawnPoint;
+
+    private GameObject canonCollider;
     void Start()
     {
         spawnPoint = trans.position;
+        canonCollider = GameObject.FindGameObjectWithTag("CanonStart");
+        
     }
 
     
@@ -20,7 +24,12 @@ public class Projectile : MonoBehaviour
 
         if (Vector3.Distance(trans.position, spawnPoint)>=range)
         {
-          //  Destroy(gameObject);
+          //Destroy(gameObject);
         }
+    }
+
+    private void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.tag == "AnyPlayer");
     }
 }

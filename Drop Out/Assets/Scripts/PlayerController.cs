@@ -11,13 +11,16 @@ public class PlayerController : MonoBehaviour
     private Animator anim = null; 
     private Rigidbody rb = null;
     private Rigidbody[] rigBones = null;
-    public bool isGrounded = true;
+    public bool isGrounded;
+    public ConfigurableJoint cjoint;
     private bool isjumping;
+    private bool onFloor = false;
+
     private void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
-
+        
         rigBones = gameObject.GetComponentsInChildren<Rigidbody>().Where(x=> x.name.Contains("mixamorig")).ToArray();
         
         TurnOffRagdoll();
@@ -32,14 +35,9 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(isGrounded);
-        // float hor = Input.GetAxis("Horizontal");
-        // float ver = Input.GetAxis("Vertical");
-        //  Vector3 move = (hor * moveSpeed * Time.deltaTime) + (ver * moveSpeed * Time.deltaTime);
-        //  transform.Translate(move);
         float fallVelocity = rb.velocity.z;
         if (Input.GetKey(KeyCode.W)){
-            //rb.velocity = transform.forward * moveSpeed * Time.deltaTime;
+           
             transform.Translate(Vector3.forward * moveSpeed *Time.deltaTime);
             anim.SetBool("Running", true);
         }else{
@@ -55,34 +53,46 @@ public class PlayerController : MonoBehaviour
         // if (isGrounded){
             
 
-        if (Input.GetKeyDown(KeyCode.Space)){
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded){
             isjumping = true;
             rb.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
             anim.SetTrigger("Jump");
+            isGrounded = false;
                 
         }
         // }
         
 
         //getup
-        if (Input.GetKeyDown(KeyCode.U)){
-            anim.enabled = true;
-            TurnOffRagdoll();
-        }
-
+        // if (Input.GetKeyDown(KeyCode.U)){
+        //     anim.enabled = true;
+        //     TurnOffRagdoll();
+        // }
+        Debug.Log(onFloor);
         rb.velocity += Vector3.down * fallVelocity;
+        if (onFloor){
+            if (cjoint.angularXDrive.positionSpring >= 100 && cjoint.angularYZDrive.positionSpring >= 100){
+        Debug.Log("off");
+        anim.enabled = true;
+        TurnOffRagdoll();
+        }
+        }
+        
     }
 
     private void OnCollisionEnter(Collision collision){
         isjumping = false;
+        isGrounded = true;
+        Debug.Log("grounded");
     }
-    // private void OnCollisionExit(Collision collision){
-    //     if (isjumping == false){
-    //         anim.enabled = false;
-    //         TurnOnRagdoll();
-    //     }
+    private void OnCollisionExit(Collision collision){
+        if (isjumping == false){
+            onFloor = true;
+            TurnOnRagdoll();
+            anim.enabled = false; 
+        }
         
-    // }
+    }
     private void TurnOffRagdoll()
     {
         foreach (Rigidbody r in rigBones){
