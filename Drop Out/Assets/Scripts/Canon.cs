@@ -8,18 +8,24 @@ public class Canon : MonoBehaviour
     public GameObject projectilePrefab;
     public float fireRate = 1f;
     private float lastFireTime = 0;
+    public bool spawnStart = false;
     void Start()
     {
-        
+        spawnStart = false;
     }
 
    
     void Update()
     {
-        if (Time.time>=lastFireTime+fireRate)
-        {
-            lastFireTime = Time.time;
-            Instantiate(projectilePrefab, spawnPoint.position, spawnPoint.rotation);
+        
+        if (spawnStart){
+            if (Time.time>=lastFireTime+fireRate)
+            {
+                lastFireTime = Time.time;
+                Instantiate(projectilePrefab, spawnPoint.position, spawnPoint.rotation);
+                fireRate = Random.Range(5,10);
+            }
         }
+        
     }
 }
