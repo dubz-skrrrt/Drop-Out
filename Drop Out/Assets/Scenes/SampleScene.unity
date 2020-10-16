@@ -415,6 +415,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9178115629557370093, guid: 9abd2e01b9af8f2489a1d71e461da66f, type: 3}
   m_PrefabInstance: {fileID: 8707022636963339398}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &432775188 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8707022637381478933, guid: 9abd2e01b9af8f2489a1d71e461da66f, type: 3}
+  m_PrefabInstance: {fileID: 8707022636963339398}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &472376676
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,6 +1069,7 @@ MonoBehaviour:
   lookAtPlayer: 1
   rotateAroundPlayer: 1
   rotateSpeed: 1
+  pivot: {fileID: 224607935}
 --- !u!1 &1030094000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1387,6 +1393,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1731055309 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8707022637384413606, guid: 9abd2e01b9af8f2489a1d71e461da66f, type: 3}
+  m_PrefabInstance: {fileID: 8707022636963339398}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1745777684
 GameObject:
   m_ObjectHideFlags: 0
@@ -1475,6 +1486,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9773612, y: 2.1184378, z: 0.09248829}
   m_Center: {x: -0.08735919, y: 0.5592189, z: -0.45375586}
+--- !u!1 &1945605739 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8707022637430336989, guid: 9abd2e01b9af8f2489a1d71e461da66f, type: 3}
+  m_PrefabInstance: {fileID: 8707022636963339398}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &64958711856325096
 GameObject:
   m_ObjectHideFlags: 0
@@ -4571,8 +4587,7 @@ MonoBehaviour:
   jumpForce: 5
   isGrounded: 0
   cjoint: {fileID: 4229848133251008144}
-  camPivot: {fileID: 224607935}
-  cam: {fileID: 963194228}
+  canons: []
 --- !u!54 &6511845476838952447
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5533,6 +5548,18 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 8707022636425263327, guid: 9abd2e01b9af8f2489a1d71e461da66f, type: 3}
+      propertyPath: canonStart
+      value: 
+      objectReference: {fileID: 432775188}
+    - target: {fileID: 8707022637160883005, guid: 9abd2e01b9af8f2489a1d71e461da66f, type: 3}
+      propertyPath: canonStart
+      value: 
+      objectReference: {fileID: 1945605739}
+    - target: {fileID: 8707022637234562513, guid: 9abd2e01b9af8f2489a1d71e461da66f, type: 3}
+      propertyPath: canonStart
+      value: 
+      objectReference: {fileID: 1731055309}
     - target: {fileID: 9178115630137202847, guid: 9abd2e01b9af8f2489a1d71e461da66f, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
