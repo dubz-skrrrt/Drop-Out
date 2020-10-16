@@ -21,6 +21,7 @@ public class Projectile : MonoBehaviour
     
     void Update()
     {
+        //Debug.Log(canonScript.spawnStart);
         if(canonScript.spawnStart){
             trans.Translate(0, 0, speed*Time.deltaTime, Space.Self);
 
@@ -28,9 +29,6 @@ public class Projectile : MonoBehaviour
             {
             //Destroy(gameObject);
             }
-        }
-            
-        
-        
+        } 
     }
 }

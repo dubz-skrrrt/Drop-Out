@@ -8,6 +8,7 @@ TagManager:
   - CanonStart
   - AnyPlayer
   - ObstacleCourse
+  - hitObstacles
   layers:
   - Default
   - TransparentFX

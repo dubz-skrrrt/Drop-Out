@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     private bool isjumping;
     private bool onFloor = false;
     private float angularDrive;
-
+    public GameObject[] canons;
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -49,19 +49,22 @@ public class PlayerController : MonoBehaviour
                 //Debug.Log(angularDrive);
             }
         }
-        if (Input.GetKey(KeyCode.W)){
+        
+            if (Input.GetKey(KeyCode.W)){
             transform.Translate(Vector3.forward * moveSpeed *Time.deltaTime);
             anim.SetBool("Running", true);
-        }else{
-            anim.SetBool("Running", false);
-        }
+            }else{
+                anim.SetBool("Running", false);
+            }
 
-        if (Input.GetKey(KeyCode.A)){
-            transform.Rotate(Vector3.up, -turnSpeed * Time.deltaTime);
-        }
-        else if (Input.GetKey(KeyCode.D)){
-            transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime);
-        }
+            if (Input.GetKey(KeyCode.A)){
+                transform.Rotate(Vector3.up, -turnSpeed * Time.deltaTime);
+            }
+            else if (Input.GetKey(KeyCode.D)){
+                transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime);
+            }
+        
+        
         if (isGrounded){
             if (Input.GetKeyDown(KeyCode.Space) && isGrounded){
                 isjumping = true;
@@ -73,13 +76,14 @@ public class PlayerController : MonoBehaviour
             }
         }
         
-        Debug.Log(onFloor);
+//        Debug.Log(onFloor);
         if (onFloor){
             if (cjoint.angularXDrive.positionSpring >= 50 && cjoint.angularYZDrive.positionSpring >= 50){
                 Debug.Log("off");
                 onFloor = false;
                 anim.enabled = true;
-                TurnOffRagdoll();         
+                TurnOffRagdoll();   
+                anim.SetTrigger("Died");      
             }
         }
         
@@ -94,13 +98,35 @@ public class PlayerController : MonoBehaviour
             rb.freezeRotation = true;
             
         }
+
+        if(collision.gameObject.name == "deathCollider"){
+            Debug.Log("dead");
+        }
+        if (collision.gameObject.tag == "hitObstacles"){
+            if (isjumping == false){
+            onFloor = true;  
+            Debug.Log("hit");
+            }  
+        }
+       
+    }
+
+    void OnTriggerEnter(Collider col){
+        
+         if (col.gameObject.tag == "CanonStart"){
+             Debug.Log("start");
+            foreach(GameObject Can in canons)
+            {
+                
+                Canon canScript = Can.GetComponent<Canon>();
+                canScript.spawnStart = true;
+                rb.freezeRotation = true;
+            }
+            
+        }
     }
     // private void OnCollisionExit(Collision collision){
-    //     if (isjumping == false){
-    //         onFloor = true;
-            
-            
-    //     }
+        
         
     // }
 
@@ -128,13 +154,12 @@ public class PlayerController : MonoBehaviour
          foreach (Rigidbody r in rigBones){
             r.isKinematic = false;
         }
-        //anim.enabled = false; 
+        anim.enabled = false; 
 
         JointDrive drive = new JointDrive();
         drive.positionSpring = angularDrive;
         cjoint.angularXDrive = drive;
         cjoint.angularYZDrive = drive;
-        anim.SetTrigger("Died");
     }
 
     
