@@ -31,4 +31,12 @@ public class Projectile : MonoBehaviour
             }
         } 
     }
+
+    void OnTriggerEnter(Collider col)
+    {
+        Debug.Log("destroy");
+        if (col.gameObject.tag == "DeathCollider"){
+            Destroy(trans);
+        }
+    }
 }
