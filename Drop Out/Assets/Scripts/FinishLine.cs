@@ -20,6 +20,7 @@ public class FinishLine : MonoBehaviour
                 //complete = true;
                 Debug.Log("WIPEOUT!");
                 SceneManager.LoadScene("UI2"); // loads game
+                Cursor.lockState = CursorLockMode.None;
             }
             
         }

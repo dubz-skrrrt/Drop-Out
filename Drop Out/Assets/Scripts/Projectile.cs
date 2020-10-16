@@ -5,8 +5,8 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public Transform trans;
-    public float speed= 5f;
-    public float range = 5f;
+    public float speed= 10f;
+    public float range = 10f;
     private Vector3 spawnPoint;
     public GameObject canonStart;
     private Canon canonScript;
@@ -25,18 +25,11 @@ public class Projectile : MonoBehaviour
         if(canonScript.spawnStart){
             trans.Translate(0, 0, speed*Time.deltaTime, Space.Self);
 
-            if (Vector3.Distance(trans.position, spawnPoint)>=range)
-            {
-            //Destroy(gameObject);
-            }
+            // if (Vector3.Distance(trans.position, spawnPoint)>=range)
+            // {
+            // Destroy(gameObject);
+            // }
         } 
     }
 
-    void OnTriggerEnter(Collider col)
-    {
-        Debug.Log("destroy");
-        if (col.gameObject.tag == "DeathCollider"){
-            Destroy(trans);
-        }
-    }
 }
