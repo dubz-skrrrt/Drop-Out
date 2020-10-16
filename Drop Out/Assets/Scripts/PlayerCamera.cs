@@ -14,10 +14,15 @@ public class PlayerCamera : MonoBehaviour
 
     public bool rotateAroundPlayer = true;
     public float rotateSpeed = 5.0f;
+
+    public Transform pivot;
     void Start()
     {
         cameraOffset = transform.position - playerTransform.position;
+        pivot.transform.position = playerTransform.transform.position;
+        pivot.transform.parent = playerTransform.transform;
 
+        Cursor.lockState = CursorLockMode.Locked;
     }
     void LateUpdate()
     {
