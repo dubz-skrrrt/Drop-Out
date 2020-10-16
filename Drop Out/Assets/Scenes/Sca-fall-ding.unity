@@ -23142,7 +23142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
-  turnSpeed: 120
+  turnSpeed: 150
   jumpForce: 5
   isGrounded: 0
   cjoint: {fileID: 4229848133251008144}

@@ -122,7 +122,11 @@ public class PlayerController : MonoBehaviour
                 canScript.spawnStart = true;
                 rb.freezeRotation = true;
             }
-            
+    
+        }
+        if(col.gameObject.name == "ColliderTest")
+        {
+           Debug.Log("HIT!");
         }
     }
     // private void OnCollisionExit(Collision collision){
@@ -132,13 +136,13 @@ public class PlayerController : MonoBehaviour
 
     //Joshel Test
 
-    private void OnControllerColliderHit(ControllerColliderHit col)
-    {
-        if(col.gameObject.name == "ColliderTest")
-        {
-           Debug.Log("HIT!");
-        }
-    }
+    // private void OnControllerColliderHit(ControllerColliderHit col)
+    // {
+    //     if(col.gameObject.name == "ColliderTest")
+    //     {
+    //        Debug.Log("HIT!");
+    //     }
+    // }
 
 
     private void TurnOffRagdoll()
