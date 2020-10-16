@@ -128,6 +128,13 @@ public class PlayerController : MonoBehaviour
         {
            Debug.Log("HIT!");
         }
+
+    }
+    void OnTriggerExit(Collider other){
+        if (other.gameObject.tag == "movingPlatforms")
+        {
+            transform.parent = null;
+        }
     }
     // private void OnCollisionExit(Collision collision){
         

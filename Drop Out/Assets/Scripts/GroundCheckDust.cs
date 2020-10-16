@@ -9,6 +9,7 @@ public class GroundCheckDust : MonoBehaviour
    void OnTriggerEnter(Collider other)
    {
        if (other.gameObject.tag.Equals("ObstacleCourse")){
+           
            Instantiate(dustCloud, transform.position, dustCloud.transform.rotation);
        }
    }

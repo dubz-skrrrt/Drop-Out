@@ -9,6 +9,7 @@ TagManager:
   - AnyPlayer
   - ObstacleCourse
   - hitObstacles
+  - movingPlatforms
   layers:
   - Default
   - TransparentFX
