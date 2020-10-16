@@ -128,6 +128,10 @@ public class PlayerController : MonoBehaviour
         {
            Debug.Log("HIT!");
         }
+<<<<<<< Updated upstream
+=======
+    }
+>>>>>>> Stashed changes
 
     }
 
