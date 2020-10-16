@@ -130,27 +130,6 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-    void OnTriggerExit(Collider other){
-        if (other.gameObject.tag == "movingPlatforms")
-        {
-            transform.parent = null;
-        }
-    }
-    // private void OnCollisionExit(Collision collision){
-        
-        
-    // }
-
-    //Joshel Test
-
-    // private void OnControllerColliderHit(ControllerColliderHit col)
-    // {
-    //     if(col.gameObject.name == "ColliderTest")
-    //     {
-    //        Debug.Log("HIT!");
-    //     }
-    // }
-
 
     private void TurnOffRagdoll()
     {
