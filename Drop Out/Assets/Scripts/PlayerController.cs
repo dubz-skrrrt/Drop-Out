@@ -103,6 +103,18 @@ public class PlayerController : MonoBehaviour
     //     }
         
     // }
+
+    //Joshel Test
+
+    private void OnControllerColliderHit(ControllerColliderHit col)
+    {
+        if(col.gameObject.name == "ColliderTest")
+        {
+           Debug.Log("HIT!");
+        }
+    }
+
+
     private void TurnOffRagdoll()
     {
         foreach (Rigidbody r in rigBones){
