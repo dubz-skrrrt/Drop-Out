@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public bool isGrounded;
     public ConfigurableJoint cjoint;
     private bool isjumping;
+    Collider capsulePlayer;
     private bool onFloor = false;
     private float angularDrive;
     public GameObject[] canons;
@@ -30,7 +31,7 @@ public class PlayerController : MonoBehaviour
         
         TurnOffRagdoll();
 
-        Collider capsulePlayer = GetComponent<Collider>();
+        capsulePlayer = GetComponent<Collider>();
         Collider[] boneColliders = gameObject.GetComponentsInChildren<Collider>().Where(x=> x.name.Contains("mixamorig")).ToArray();
 
         for (int i = 0; i <boneColliders.Length; i++){
@@ -153,7 +154,9 @@ public class PlayerController : MonoBehaviour
          foreach (Rigidbody r in rigBones){
             r.isKinematic = false;
             r.mass = 0;
+            
         }
+        
         anim.enabled = false; 
         moving = false;
         JointDrive drive = new JointDrive();
