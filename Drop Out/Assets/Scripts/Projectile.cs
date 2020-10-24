@@ -5,7 +5,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public Transform trans;
-    public float speed= 10f;
+    public float speed= 20f;
     public float range = 10f;
     private Vector3 spawnPoint;
     public GameObject canonStart;

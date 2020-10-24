@@ -34,9 +34,10 @@ public class PlayerController : MonoBehaviour
         Collider[] boneColliders = gameObject.GetComponentsInChildren<Collider>().Where(x=> x.name.Contains("mixamorig")).ToArray();
 
         for (int i = 0; i <boneColliders.Length; i++){
-            Physics.IgnoreCollision(capsulePlayer, boneColliders[i]);
+            Physics.IgnoreCollision(capsulePlayer, boneColliders[i], true);
         }
         isGrounded = true;
+        Physics.IgnoreLayerCollision(10, 9, true);
     }
 
     private void Update()
