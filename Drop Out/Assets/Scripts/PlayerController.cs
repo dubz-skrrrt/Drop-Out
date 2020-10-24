@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public float turnSpeed;
     public float jumpForce;
+    public bool moving;
     private Animator anim = null; 
     private Rigidbody rb = null;
     private Rigidbody[] rigBones = null;
@@ -22,9 +23,9 @@ public class PlayerController : MonoBehaviour
     public GameObject[] canons;
     private void Start()
     {
+        moving = true;
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
-        
         rigBones = gameObject.GetComponentsInChildren<Rigidbody>().Where(x=> x.name.Contains("mixamorig")).ToArray();
         
         TurnOffRagdoll();
@@ -48,8 +49,13 @@ public class PlayerController : MonoBehaviour
                 angularDrive += 25 * Time.deltaTime;
                 //Debug.Log(angularDrive);
             }
+        }else{
+            if (angularDrive > 0){
+                angularDrive -= 20 * Time.deltaTime;
+            }
         }
-        
+        Debug.Log("it is:" + moving);
+        if (moving == true){
             if (Input.GetKey(KeyCode.W)){
             transform.Translate(Vector3.forward * moveSpeed *Time.deltaTime);
             anim.SetBool("Running", true);
@@ -64,7 +70,9 @@ public class PlayerController : MonoBehaviour
                 transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime);
             }
         
-        
+        }else{
+
+        }
         if (isGrounded){
             if (Input.GetKeyDown(KeyCode.Space) && isGrounded){
                 isjumping = true;
@@ -78,12 +86,13 @@ public class PlayerController : MonoBehaviour
         
 //        Debug.Log(onFloor);
         if (onFloor){
-            if (cjoint.angularXDrive.positionSpring >= 50 && cjoint.angularYZDrive.positionSpring >= 50){
+            if (cjoint.angularXDrive.positionSpring >= 100 && cjoint.angularYZDrive.positionSpring >= 100){
                 Debug.Log("off");
                 onFloor = false;
                 anim.enabled = true;
                 TurnOffRagdoll();   
-                anim.SetTrigger("Died");      
+                //anim.SetTrigger("Died");      
+                moving = true;
             }
         }
         
@@ -99,13 +108,10 @@ public class PlayerController : MonoBehaviour
             
         }
 
-        if(collision.gameObject.name == "deathCollider"){
-            Debug.Log("dead");
-        }
-        if (collision.gameObject.tag == "hitObstacles"){
+        if (collision.gameObject.name == "Pilar" || collision.gameObject.tag =="Cannonball"){
             if (isjumping == false){
-            onFloor = true;  
-            Debug.Log("hit");
+                onFloor = true;  
+                TurnOnRagdoll();
             }  
         }
        
@@ -117,7 +123,6 @@ public class PlayerController : MonoBehaviour
              Debug.Log("start");
             foreach(GameObject Can in canons)
             {
-                
                 Canon canScript = Can.GetComponent<Canon>();
                 canScript.spawnStart = true;
                 rb.freezeRotation = true;
@@ -129,13 +134,16 @@ public class PlayerController : MonoBehaviour
            Debug.Log("HIT!");
         }
 
+
     }
 
     private void TurnOffRagdoll()
     {
         foreach (Rigidbody r in rigBones){
             r.isKinematic = true;
+            r.mass = 5;
         }
+        
     }
 
     private void TurnOnRagdoll()
@@ -143,9 +151,10 @@ public class PlayerController : MonoBehaviour
 
          foreach (Rigidbody r in rigBones){
             r.isKinematic = false;
+            r.mass = 0;
         }
         anim.enabled = false; 
-
+        moving = false;
         JointDrive drive = new JointDrive();
         drive.positionSpring = angularDrive;
         cjoint.angularXDrive = drive;
