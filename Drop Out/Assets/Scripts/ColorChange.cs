@@ -49,6 +49,10 @@ public class ColorChange : MonoBehaviour
             answer = true;
             startTimer = false;
             }
+            if (finalScript.restart){
+                Debug.Log(finalScript.restart);
+                timer = 0.0f;
+            }
         }
         //Debug.Log(activeTimer);
         //Debug.Log("it is: " + activePlat);

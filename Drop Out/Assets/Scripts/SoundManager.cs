@@ -37,7 +37,7 @@ public class SoundManager : MonoBehaviour
             case "Collision":
                 audioSrc.PlayOneShot(playerCollision);
                 break;
-            case "Cannonsfx":
+             case "Cannonsfx":
                 audioSrc.PlayOneShot(cannonSFX);
                 break;
         }
