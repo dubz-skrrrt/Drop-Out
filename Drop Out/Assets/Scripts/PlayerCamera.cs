@@ -45,8 +45,8 @@ public class PlayerCamera : MonoBehaviour
 
     void OnTriggerEnter(Collider col){
         if (col.gameObject.tag == "CameraChangeCollider"){
-            Debug.Log("Change");
-            Camera.main.transform.eulerAngles = new Vector3(Camera.main.transform.eulerAngles.x - 40, Camera.main.transform.eulerAngles.y, Camera.main.transform.eulerAngles.z);
+            Camera.main.transform.eulerAngles = new Vector3(Camera.main.transform.eulerAngles.x, Camera.main.transform.eulerAngles.y, Camera.main.transform.eulerAngles.z);
+            Debug.Log(Camera.main.transform.eulerAngles.x +"Change");
         }
     }
 
