@@ -17,7 +17,8 @@ public class ColorChange : MonoBehaviour
     public float timer = 0f;
     private GameObject[] TVColor;
     private GameObject[] platforms;
-    private int finalColor;
+    public int finalColor;
+
 
     void Start()
     {
@@ -48,11 +49,18 @@ public class ColorChange : MonoBehaviour
         if (startTimer){
             if (timer > 10f){
             answer = true;
+            startTimer = false;
             }
+
         }
         
         if (answer == true){
+            for (int i = 0; i > 1; i++){
+                finalColor = Random.Range(0, randColors.Length);
+            }
+            Debug.Log(finalColor);
             FinalAnswer();
+            answer = false;
         }
         timeSinceChange += Time.deltaTime;
         if (timeSinceChange >= timeToChange && startTimer == true){
@@ -69,29 +77,22 @@ public class ColorChange : MonoBehaviour
 
     public void FinalAnswer()
     {
-        if (startTimer){
-            finalColor = Random.Range(0, randColors.Length);
-            startTimer = false;
-            Debug.Log(finalColor);
-        }
-        
         foreach (GameObject cube in TVColor){
             cube.GetComponent<Renderer>().material.color = randColors[finalColor];
         }
-
+        
         objChangeColor.GetComponent<Renderer>().material.color = original;
         
         answer = false;
         CorrectPlatform();
-        
     }
 
     void CorrectPlatform(){
         platforms = GameObject.FindGameObjectsWithTag("colorPlatforms");
         foreach(GameObject plat in platforms)
         if (plat.GetComponent<ColorChange>().minColorRange<finalColor && plat.GetComponent<ColorChange>().maxColorRange>finalColor){
-            // Debug.Log(plat.GetComponent<ColorChange>().minColorRange);
-            // Debug.Log(plat.GetComponent<ColorChange>().maxColorRange);
+            Debug.Log(plat.GetComponent<ColorChange>().minColorRange);
+            Debug.Log(plat.GetComponent<ColorChange>().maxColorRange);
             Debug.Log(plat.name);
             //plat.SetActive(false);
         }else{

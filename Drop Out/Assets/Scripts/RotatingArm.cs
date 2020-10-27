@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RotatingArm : MonoBehaviour
 {
-    private float speed = 1f;
+    private float speed = 0.6f;
 
     // Update is called once per frame
     void Update()
