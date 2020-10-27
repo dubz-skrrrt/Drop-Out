@@ -78,6 +78,7 @@ public class PlayerController : MonoBehaviour
         }
         if (isGrounded){
             if (Input.GetKeyDown(KeyCode.Space) && isGrounded){
+                SoundManager.PlaySound("Jumpsfx");
                 isjumping = true;
                 rb.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
                 anim.SetTrigger("Jump");
@@ -132,10 +133,7 @@ public class PlayerController : MonoBehaviour
             }
     
         }
-        if(col.gameObject.name == "ColliderTest")
-        {
-           Debug.Log("HIT!");
-        }
+
 
 
     }

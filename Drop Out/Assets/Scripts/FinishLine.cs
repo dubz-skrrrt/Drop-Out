@@ -18,11 +18,18 @@ public class FinishLine : MonoBehaviour
             if (qualified == maxQualification)
             {
                 //complete = true;
+                SoundManager.PlaySound("Yipee");
                 Debug.Log("WIPEOUT!");
-                SceneManager.LoadScene("UI2"); // loads game
                 Cursor.lockState = CursorLockMode.None;
+                StartCoroutine(DelayNextLevel());
             }
             
         }
+    }
+
+    IEnumerator DelayNextLevel()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("UI2"); // loads next level
     }
 }
