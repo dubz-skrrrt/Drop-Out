@@ -20057,6 +20057,10 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 5842690823674140487}
+    - target: {fileID: 3271485177294018078, guid: 4f85b863cd6378641b1b74bc909f32fb, type: 3}
+      propertyPath: smoothFactor
+      value: 0.035
+      objectReference: {fileID: 0}
     - target: {fileID: 3271485177294018079, guid: 4f85b863cd6378641b1b74bc909f32fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 35.8
