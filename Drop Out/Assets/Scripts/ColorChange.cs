@@ -7,6 +7,7 @@ public class ColorChange : MonoBehaviour
     public Color[] randColors = new Color[12];
     Color original;
     public GameObject objChangeColor;
+
     public float timeToChange = 0.1f;
     private float timeSinceChange = 0f;
     public int minColorRange;
@@ -15,7 +16,8 @@ public class ColorChange : MonoBehaviour
     private bool startTimer;
     public float timer = 0f;
     private GameObject[] TVColor;
-    public int finalColor;
+    private GameObject[] platforms;
+    private int finalColor;
 
     void Start()
     {
@@ -40,11 +42,11 @@ public class ColorChange : MonoBehaviour
     }
 
     void Update(){
-        Debug.Log(timer);
+        //Debug.Log(timer);
         timer += Time.deltaTime;
 
         if (startTimer){
-            if (timer > 20f){
+            if (timer > 10f){
             answer = true;
             startTimer = false;
             }
@@ -62,13 +64,13 @@ public class ColorChange : MonoBehaviour
     void randomColorChange(){
         int newColor = Random.Range(minColorRange, maxColorRange);
         objChangeColor.GetComponent<Renderer>().material.color = randColors[newColor];
+
         timeSinceChange = 0f;
     }
 
     public void FinalAnswer()
     {
         finalColor = Random.Range(0, randColors.Length);
-        Debug.Log (finalColor);
         foreach (GameObject cube in TVColor){
             cube.GetComponent<Renderer>().material.color = randColors[finalColor];
         }
@@ -76,6 +78,22 @@ public class ColorChange : MonoBehaviour
         objChangeColor.GetComponent<Renderer>().material.color = original;
         
         answer = false;
+        CorrectPlatform();
+        
+    }
+
+    void CorrectPlatform(){
+        platforms = GameObject.FindGameObjectsWithTag("colorPlatforms");
+        foreach(GameObject plat in platforms)
+        if (finalColor>plat.GetComponent<ColorChange>().minColorRange && finalColor<plat.GetComponent<ColorChange>().maxColorRange){
+            Debug.Log(plat.GetComponent<ColorChange>().minColorRange);
+            Debug.Log(plat.GetComponent<ColorChange>().maxColorRange);
+            Debug.Log(plat.name);
+            //plat.SetActive(false);
+        }else{
+            
+        }
+        
     }
     
 }

@@ -1250,7 +1250,7 @@ GameObject:
   - component: {fileID: 1306080075259776743}
   m_Layer: 0
   m_Name: platform
-  m_TagString: Untagged
+  m_TagString: colorPlatforms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1298,7 +1298,8 @@ MonoBehaviour:
   timeToChange: 2
   minColorRange: 0
   maxColorRange: 3
-  timer: 20
+  timer: 10
+  finalColor: 0
 --- !u!1 &1614226370238344278
 GameObject:
   m_ObjectHideFlags: 0
@@ -1380,8 +1381,8 @@ GameObject:
   - component: {fileID: 1869004960271355714}
   - component: {fileID: 1869004960271355715}
   m_Layer: 0
-  m_Name: platform
-  m_TagString: Untagged
+  m_Name: platform2
+  m_TagString: colorPlatforms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1429,7 +1430,8 @@ MonoBehaviour:
   timeToChange: 2
   minColorRange: 6
   maxColorRange: 9
-  timer: 20
+  timer: 10
+  finalColor: 0
 --- !u!4 &2666126897599884873
 Transform:
   m_ObjectHideFlags: 0
@@ -1565,8 +1567,8 @@ GameObject:
   - component: {fileID: 5820216907772756648}
   - component: {fileID: 5820216907772756649}
   m_Layer: 0
-  m_Name: platform
-  m_TagString: Untagged
+  m_Name: platform3
+  m_TagString: colorPlatforms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1614,7 +1616,8 @@ MonoBehaviour:
   timeToChange: 2
   minColorRange: 9
   maxColorRange: 12
-  timer: 20
+  timer: 10
+  finalColor: 0
 --- !u!33 &5831319025862180227
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1800,8 +1803,8 @@ GameObject:
   - component: {fileID: 9022215873487188612}
   - component: {fileID: 9022215873487188613}
   m_Layer: 0
-  m_Name: platform
-  m_TagString: Untagged
+  m_Name: platform1
+  m_TagString: colorPlatforms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1849,7 +1852,8 @@ MonoBehaviour:
   timeToChange: 2
   minColorRange: 3
   maxColorRange: 6
-  timer: 20
+  timer: 10
+  finalColor: 0
 --- !u!4 &9140381147500549256
 Transform:
   m_ObjectHideFlags: 0
