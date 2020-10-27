@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public static AudioClip playerJump, playerDeath, playerWin, playerCollision;
+    public static AudioClip playerJump, playerDeath, playerWin, playerCollision, cannonSFX;
     static AudioSource audioSrc;
 
     // Start is called before the first frame update
@@ -14,6 +14,8 @@ public class SoundManager : MonoBehaviour
         playerDeath = Resources.Load<AudioClip> ("Byebye");
         playerWin = Resources.Load<AudioClip> ("Yipee");
         playerCollision = Resources.Load<AudioClip> ("Collision");
+        cannonSFX = Resources.Load<AudioClip> ("Cannonsfx");
+        
 
 
         audioSrc = GetComponent<AudioSource>();
@@ -34,6 +36,9 @@ public class SoundManager : MonoBehaviour
                 break;
             case "Collision":
                 audioSrc.PlayOneShot(playerCollision);
+                break;
+            case "Cannonsfx":
+                audioSrc.PlayOneShot(cannonSFX);
                 break;
         }
     }

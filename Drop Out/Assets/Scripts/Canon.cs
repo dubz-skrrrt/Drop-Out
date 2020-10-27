@@ -22,6 +22,7 @@ public class Canon : MonoBehaviour
         if (spawnStart){
             if (Time.time>=lastFireTime+fireRate)
             {
+                SoundManager.PlaySound("Cannonsfx");
                 lastFireTime = Time.time;
                 Destroy(Instantiate(projectilePrefab, new Vector3(spawnPoint.position.x, spawnPoint.position.y,spawnPoint.position.z + 1), spawnPoint.rotation), 15f);
 

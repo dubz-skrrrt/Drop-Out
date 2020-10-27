@@ -30,6 +30,6 @@ public class FinishLine : MonoBehaviour
     IEnumerator DelayNextLevel()
     {
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("UI2"); // loads next level
+        SceneManager.LoadScene("The Pithole"); // loads next level
     }
 }
