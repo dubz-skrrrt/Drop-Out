@@ -509,6 +509,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 805104272}
+  - component: {fileID: 805104273}
   m_Layer: 0
   m_Name: TVColor
   m_TagString: Untagged
@@ -533,6 +534,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &805104273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805104271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25d4f49f2c4ecba4a88daf5a6c8431d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TVColor:
+  - {fileID: 386381834}
+  - {fileID: 1114632590}
+  - {fileID: 1799377154}
+  colorScript: {fileID: 1306080075259776743}
+  CurrentColor: 0
 --- !u!1 &1114632590
 GameObject:
   m_ObjectHideFlags: 0
@@ -1294,12 +1313,15 @@ MonoBehaviour:
   - {r: 0, g: 0, b: 0, a: 0}
   - {r: 0, g: 0, b: 0, a: 0}
   - {r: 0, g: 0, b: 0, a: 0}
+  original: {r: 0, g: 0, b: 0, a: 0}
   objChangeColor: {fileID: 1306080075259776741}
-  timeToChange: 2
+  timeToChange: 1
   minColorRange: 0
   maxColorRange: 3
+  answer: 0
+  startTimer: 0
   timer: 10
-  finalColor: 0
+  finalScript: {fileID: 805104273}
 --- !u!1 &1614226370238344278
 GameObject:
   m_ObjectHideFlags: 0
@@ -1426,12 +1448,15 @@ MonoBehaviour:
   - {r: 0, g: 0, b: 0, a: 0}
   - {r: 0, g: 0, b: 0, a: 0}
   - {r: 0, g: 0, b: 0, a: 0}
+  original: {r: 0, g: 0, b: 0, a: 0}
   objChangeColor: {fileID: 1869004960271355713}
-  timeToChange: 2
+  timeToChange: 1
   minColorRange: 6
   maxColorRange: 9
+  answer: 0
+  startTimer: 0
   timer: 10
-  finalColor: 0
+  finalScript: {fileID: 805104273}
 --- !u!4 &2666126897599884873
 Transform:
   m_ObjectHideFlags: 0
@@ -1612,12 +1637,15 @@ MonoBehaviour:
   - {r: 0, g: 0, b: 0, a: 0}
   - {r: 0, g: 0, b: 0, a: 0}
   - {r: 0, g: 0, b: 0, a: 0}
+  original: {r: 0, g: 0, b: 0, a: 0}
   objChangeColor: {fileID: 5820216907772756647}
-  timeToChange: 2
+  timeToChange: 1
   minColorRange: 9
   maxColorRange: 12
+  answer: 0
+  startTimer: 0
   timer: 10
-  finalColor: 0
+  finalScript: {fileID: 805104273}
 --- !u!33 &5831319025862180227
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1848,12 +1876,15 @@ MonoBehaviour:
   - {r: 0, g: 0, b: 0, a: 0}
   - {r: 0, g: 0, b: 0, a: 0}
   - {r: 0, g: 0, b: 0, a: 0}
+  original: {r: 0, g: 0, b: 0, a: 0}
   objChangeColor: {fileID: 9022215873487188611}
-  timeToChange: 2
+  timeToChange: 1
   minColorRange: 3
   maxColorRange: 6
+  answer: 0
+  startTimer: 0
   timer: 10
-  finalColor: 0
+  finalScript: {fileID: 805104273}
 --- !u!4 &9140381147500549256
 Transform:
   m_ObjectHideFlags: 0

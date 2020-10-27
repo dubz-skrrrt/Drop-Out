@@ -4,22 +4,19 @@ using UnityEngine;
 
 public class ColorChange : MonoBehaviour
 {
-    public Color[] randColors = new Color[12];
-    Color original;
-    public GameObject objChangeColor;
-
-    public float timeToChange = 0.1f;
+    
+    public float activeTimer = 0f;
     private float timeSinceChange = 0f;
+    private Color original;
+    public GameObject[] objChangeColor;
+    public Color[] randColors = new Color[12];
+    public float timeToChange = 0.1f;
     public int minColorRange;
     public int maxColorRange;
-    private bool answer;
-    private bool startTimer;
+    public bool answer;
+    public bool startTimer;
     public float timer = 0f;
-    private GameObject[] TVColor;
-    private GameObject[] platforms;
-    public int finalColor;
-
-
+    public FinalColor finalScript;
     void Start()
     {
         original = Color.gray;
@@ -35,32 +32,43 @@ public class ColorChange : MonoBehaviour
         randColors[9] = new Color32(79, 33, 4, 255);
         randColors[10] = new Color32(0, 51, 102, 255);
         randColors[11] = Color.black;
-
-        TVColor = GameObject.FindGameObjectsWithTag("cubeColor");
         answer = false;
         timer = 0.0f;
+        activeTimer = 0.0f;
         startTimer = true;
+        objChangeColor = GameObject.FindGameObjectsWithTag("colorPlatforms");
     }
 
     void Update(){
         //Debug.Log(timer);
         timer += Time.deltaTime;
-
+        
         if (startTimer){
             if (timer > 10f){
             answer = true;
             startTimer = false;
+            
             }
-
         }
-        
+        //Debug.Log(activeTimer);
+        activeTimer += Time.deltaTime;
+        //Debug.Log("it is: " + activePlat);
+        if (activeTimer > 12f){         
+            finalScript.activePlat = false;
+        }
+        if(activeTimer > 15f){
+            finalScript.activePlat = true;
+            finalScript.CorrectPlatform();
+            
+            
+        }
         if (answer == true){
-            for (int i = 0; i > 1; i++){
-                finalColor = Random.Range(0, randColors.Length);
+            finalScript.FinalAnswer();
+            foreach(GameObject colorPlat in objChangeColor){
+                colorPlat.GetComponent<Renderer>().material.color = original;
             }
-            Debug.Log(finalColor);
-            FinalAnswer();
-            answer = false;
+            finalScript.CorrectPlatform();
+            
         }
         timeSinceChange += Time.deltaTime;
         if (timeSinceChange >= timeToChange && startTimer == true){
@@ -69,36 +77,15 @@ public class ColorChange : MonoBehaviour
         
     }
     void randomColorChange(){
+
         int newColor = Random.Range(minColorRange, maxColorRange);
-        objChangeColor.GetComponent<Renderer>().material.color = randColors[newColor];
+        foreach(GameObject changeColor in objChangeColor){
+            changeColor.GetComponent<Renderer>().material.color = randColors[newColor];
+        }
 
         timeSinceChange = 0f;
     }
 
-    public void FinalAnswer()
-    {
-        foreach (GameObject cube in TVColor){
-            cube.GetComponent<Renderer>().material.color = randColors[finalColor];
-        }
-        
-        objChangeColor.GetComponent<Renderer>().material.color = original;
-        
-        answer = false;
-        CorrectPlatform();
-    }
 
-    void CorrectPlatform(){
-        platforms = GameObject.FindGameObjectsWithTag("colorPlatforms");
-        foreach(GameObject plat in platforms)
-        if (plat.GetComponent<ColorChange>().minColorRange<finalColor && plat.GetComponent<ColorChange>().maxColorRange>finalColor){
-            Debug.Log(plat.GetComponent<ColorChange>().minColorRange);
-            Debug.Log(plat.GetComponent<ColorChange>().maxColorRange);
-            Debug.Log(plat.name);
-            //plat.SetActive(false);
-        }else{
-            
-        }
-        
-    }
     
 }

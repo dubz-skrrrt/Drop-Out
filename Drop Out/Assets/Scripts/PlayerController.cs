@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
                 angularDrive -= 20 * Time.deltaTime;
             }
         }
-        Debug.Log("it is:" + moving);
+        //Debug.Log("it is:" + moving);
         if (moving == true){
             if (Input.GetKey(KeyCode.W)){
             transform.Translate(Vector3.forward * moveSpeed *Time.deltaTime);
