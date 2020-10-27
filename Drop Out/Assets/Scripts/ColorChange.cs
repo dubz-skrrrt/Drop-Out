@@ -8,7 +8,7 @@ public class ColorChange : MonoBehaviour
     public float activeTimer = 0f;
     private float timeSinceChange = 0f;
     private Color original;
-    public GameObject[] objChangeColor;
+    public GameObject objChangeColor;
     public Color[] randColors = new Color[12];
     public float timeToChange = 0.1f;
     public int minColorRange;
@@ -36,7 +36,8 @@ public class ColorChange : MonoBehaviour
         timer = 0.0f;
         activeTimer = 0.0f;
         startTimer = true;
-        objChangeColor = GameObject.FindGameObjectsWithTag("colorPlatforms");
+        finalScript.activePlat = true;
+        
     }
 
     void Update(){
@@ -47,41 +48,43 @@ public class ColorChange : MonoBehaviour
             if (timer > 10f){
             answer = true;
             startTimer = false;
-            
             }
         }
         //Debug.Log(activeTimer);
-        activeTimer += Time.deltaTime;
         //Debug.Log("it is: " + activePlat);
-        if (activeTimer > 12f){         
-            finalScript.activePlat = false;
-        }
-        if(activeTimer > 15f){
-            finalScript.activePlat = true;
-            finalScript.CorrectPlatform();
-            
-            
-        }
+        
+        // if (activeTimer < 12f){         
+        //     activeTimer += 0.05f;
+        //     finalScript.activePlat = false;
+        // }else{
+        //     finalScript.activePlat = true;
+        //     activeTimer = 0.0f;
+        // }
+        // if (activeTimer > 15f){
+        //     activeTimer = 0.0f;
+        //     timer = 0.0f;
+        // }
+        
+        
         if (answer == true){
             finalScript.FinalAnswer();
-            foreach(GameObject colorPlat in objChangeColor){
-                colorPlat.GetComponent<Renderer>().material.color = original;
-            }
-            finalScript.CorrectPlatform();
+            objChangeColor.GetComponent<Renderer>().material.color = original;
+            // finalScript.CorrectPlatform();
             
+        }else{
+            timeSinceChange += Time.deltaTime;
+            if (timeSinceChange >= timeToChange && startTimer == true){
+                randomColorChange();
+
+            }
         }
-        timeSinceChange += Time.deltaTime;
-        if (timeSinceChange >= timeToChange && startTimer == true){
-            randomColorChange();
-        }
+        
         
     }
     void randomColorChange(){
 
         int newColor = Random.Range(minColorRange, maxColorRange);
-        foreach(GameObject changeColor in objChangeColor){
-            changeColor.GetComponent<Renderer>().material.color = randColors[newColor];
-        }
+        objChangeColor.GetComponent<Renderer>().material.color = randColors[newColor];
 
         timeSinceChange = 0f;
     }
