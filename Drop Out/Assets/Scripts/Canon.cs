@@ -31,12 +31,4 @@ public class Canon : MonoBehaviour
         }
         
     }
-
-    // void OnTriggerEnter(Collider col)
-    // {
-    //     Debug.Log("destroy");
-    //     if (col.gameObject.tag == "DeathCollider"){
-    //         Destroy(Instantiate(projectilePrefab.gameObject, spawnPoint.position, spawnPoint.rotation));
-    //     }
-    // }
 }

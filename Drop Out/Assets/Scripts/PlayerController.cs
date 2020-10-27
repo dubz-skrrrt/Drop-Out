@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public ConfigurableJoint cjoint;
     private bool isjumping;
     Collider capsulePlayer;
+    Collider[] boneColliders;
     private bool onFloor = false;
     private float angularDrive;
     public GameObject[] canons;
@@ -32,7 +33,7 @@ public class PlayerController : MonoBehaviour
         TurnOffRagdoll();
 
         capsulePlayer = GetComponent<Collider>();
-        Collider[] boneColliders = gameObject.GetComponentsInChildren<Collider>().Where(x=> x.name.Contains("mixamorig")).ToArray();
+        boneColliders = gameObject.GetComponentsInChildren<Collider>().Where(x=> x.name.Contains("mixamorig")).ToArray();
 
         for (int i = 0; i <boneColliders.Length; i++){
             Physics.IgnoreCollision(capsulePlayer, boneColliders[i], true);

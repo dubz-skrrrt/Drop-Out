@@ -21,14 +21,8 @@ public class Projectile : MonoBehaviour
     
     void Update()
     {
-        //Debug.Log(canonScript.spawnStart);
         if(canonScript.spawnStart){
             trans.Translate(0, 0, speed*Time.deltaTime, Space.Self);
-
-            // if (Vector3.Distance(trans.position, spawnPoint)>=range)
-            // {
-            // Destroy(gameObject);
-            // }
         } 
     }
 
