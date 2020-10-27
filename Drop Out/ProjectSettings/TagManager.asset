@@ -10,6 +10,7 @@ TagManager:
   - ObstacleCourse
   - hitObstacles
   - movingPlatforms
+  - cubeColor
   layers:
   - Default
   - TransparentFX

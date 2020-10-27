@@ -160,7 +160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 988eb21d9a353db43ad7dd21708d80f8, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 988eb21d9a353db43ad7dd21708d80f8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -371,7 +371,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &386381834
 GameObject:
@@ -385,10 +385,9 @@ GameObject:
   - component: {fileID: 386381838}
   - component: {fileID: 386381837}
   - component: {fileID: 386381836}
-  - component: {fileID: 386381839}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: CubeColor
+  m_TagString: cubeColor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -469,20 +468,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 386381834}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &386381839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 386381834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b147d823d30eac4db359d558e556d41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objChangeColor: {fileID: 386381834}
-  timeToChange: 1
 --- !u!1 &669183727
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,15 +491,48 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 669183727}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.22, y: 2.77, z: -27}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -7.8019032, y: -4.029896, z: -23.144016}
   m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children:
   - {fileID: 256631100}
   - {fileID: 1517542354}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 805104272}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &805104271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 805104272}
+  m_Layer: 0
+  m_Name: TVColor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &805104272
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805104271}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.021903, y: 6.799896, z: -3.8559828}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 543450652589679053}
+  - {fileID: 669183728}
+  - {fileID: 2066496897}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1114632590
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,10 +545,9 @@ GameObject:
   - component: {fileID: 1114632594}
   - component: {fileID: 1114632593}
   - component: {fileID: 1114632592}
-  - component: {fileID: 1114632595}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: CubeColor
+  m_TagString: cubeColor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -611,20 +628,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1114632590}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1114632595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1114632590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b147d823d30eac4db359d558e556d41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objChangeColor: {fileID: 1114632590}
-  timeToChange: 1
 --- !u!1001 &1165581982
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -680,7 +683,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: dropguy
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7706582262265244522, guid: 3266364e32767214ea3c3ebba1225ed8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3266364e32767214ea3c3ebba1225ed8, type: 3}
 --- !u!1 &1293262185
 GameObject:
@@ -1004,10 +1008,9 @@ GameObject:
   - component: {fileID: 1799377158}
   - component: {fileID: 1799377157}
   - component: {fileID: 1799377156}
-  - component: {fileID: 1799377159}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: CubeColor
+  m_TagString: cubeColor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1088,20 +1091,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1799377154}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1799377159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1799377154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b147d823d30eac4db359d558e556d41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objChangeColor: {fileID: 1799377154}
-  timeToChange: 1
 --- !u!4 &1961703201 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7041544116195635756, guid: 3266364e32767214ea3c3ebba1225ed8, type: 3}
@@ -1130,14 +1119,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2066496896}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.22, y: 2.99, z: 27}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -7.8019032, y: -3.8098958, z: 30.855984}
   m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children:
   - {fileID: 1792007291}
   - {fileID: 1293262186}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 805104272}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!4 &543450652589679053
 Transform:
@@ -1146,14 +1135,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148118567799}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27, y: 3.1, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 18.978096, y: -3.6998959, z: 3.8559828}
   m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children:
   - {fileID: 5898855750884117996}
   - {fileID: 9140381147500549256}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 805104272}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &543450652913821832
 Transform:
@@ -1171,7 +1160,7 @@ Transform:
   - {fileID: 3681652846786561149}
   - {fileID: 2666126897599884873}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &919132148118567799
 GameObject:
@@ -1258,6 +1247,7 @@ GameObject:
   - component: {fileID: 8493741610830096405}
   - component: {fileID: 7216655632203884241}
   - component: {fileID: 1306080075259776742}
+  - component: {fileID: 1306080075259776743}
   m_Layer: 0
   m_Name: platform
   m_TagString: Untagged
@@ -1279,6 +1269,36 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1226817584057097758, guid: b00943a59239b5d419f46d79ca0b519b, type: 3}
+--- !u!114 &1306080075259776743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306080075259776741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b147d823d30eac4db359d558e556d41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randColors:
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  objChangeColor: {fileID: 1306080075259776741}
+  timeToChange: 2
+  minColorRange: 0
+  maxColorRange: 3
+  timer: 20
 --- !u!1 &1614226370238344278
 GameObject:
   m_ObjectHideFlags: 0
@@ -1358,6 +1378,7 @@ GameObject:
   - component: {fileID: 5831319025862180227}
   - component: {fileID: 6541204902137594790}
   - component: {fileID: 1869004960271355714}
+  - component: {fileID: 1869004960271355715}
   m_Layer: 0
   m_Name: platform
   m_TagString: Untagged
@@ -1379,6 +1400,36 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8097860741330282927, guid: b00943a59239b5d419f46d79ca0b519b, type: 3}
+--- !u!114 &1869004960271355715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869004960271355713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b147d823d30eac4db359d558e556d41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randColors:
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  objChangeColor: {fileID: 1869004960271355713}
+  timeToChange: 2
+  minColorRange: 6
+  maxColorRange: 9
+  timer: 20
 --- !u!4 &2666126897599884873
 Transform:
   m_ObjectHideFlags: 0
@@ -1512,6 +1563,7 @@ GameObject:
   - component: {fileID: 2955920079837240359}
   - component: {fileID: 4191509098202560792}
   - component: {fileID: 5820216907772756648}
+  - component: {fileID: 5820216907772756649}
   m_Layer: 0
   m_Name: platform
   m_TagString: Untagged
@@ -1533,6 +1585,36 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -364044783463932134, guid: b00943a59239b5d419f46d79ca0b519b, type: 3}
+--- !u!114 &5820216907772756649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5820216907772756647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b147d823d30eac4db359d558e556d41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randColors:
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  objChangeColor: {fileID: 5820216907772756647}
+  timeToChange: 2
+  minColorRange: 9
+  maxColorRange: 12
+  timer: 20
 --- !u!33 &5831319025862180227
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1716,6 +1798,7 @@ GameObject:
   - component: {fileID: 1795051410345217255}
   - component: {fileID: 7484468418695323784}
   - component: {fileID: 9022215873487188612}
+  - component: {fileID: 9022215873487188613}
   m_Layer: 0
   m_Name: platform
   m_TagString: Untagged
@@ -1737,6 +1820,36 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -9010193167645078742, guid: b00943a59239b5d419f46d79ca0b519b, type: 3}
+--- !u!114 &9022215873487188613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9022215873487188611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b147d823d30eac4db359d558e556d41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randColors:
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  objChangeColor: {fileID: 9022215873487188611}
+  timeToChange: 2
+  minColorRange: 3
+  maxColorRange: 6
+  timer: 20
 --- !u!4 &9140381147500549256
 Transform:
   m_ObjectHideFlags: 0
