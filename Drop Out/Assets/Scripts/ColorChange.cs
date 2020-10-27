@@ -48,7 +48,6 @@ public class ColorChange : MonoBehaviour
         if (startTimer){
             if (timer > 10f){
             answer = true;
-            startTimer = false;
             }
         }
         
@@ -70,7 +69,12 @@ public class ColorChange : MonoBehaviour
 
     public void FinalAnswer()
     {
-        finalColor = Random.Range(0, randColors.Length);
+        if (startTimer){
+            finalColor = Random.Range(0, randColors.Length);
+            startTimer = false;
+            Debug.Log(finalColor);
+        }
+        
         foreach (GameObject cube in TVColor){
             cube.GetComponent<Renderer>().material.color = randColors[finalColor];
         }
@@ -85,9 +89,9 @@ public class ColorChange : MonoBehaviour
     void CorrectPlatform(){
         platforms = GameObject.FindGameObjectsWithTag("colorPlatforms");
         foreach(GameObject plat in platforms)
-        if (finalColor>plat.GetComponent<ColorChange>().minColorRange && finalColor<plat.GetComponent<ColorChange>().maxColorRange){
-            Debug.Log(plat.GetComponent<ColorChange>().minColorRange);
-            Debug.Log(plat.GetComponent<ColorChange>().maxColorRange);
+        if (plat.GetComponent<ColorChange>().minColorRange<finalColor && plat.GetComponent<ColorChange>().maxColorRange>finalColor){
+            // Debug.Log(plat.GetComponent<ColorChange>().minColorRange);
+            // Debug.Log(plat.GetComponent<ColorChange>().maxColorRange);
             Debug.Log(plat.name);
             //plat.SetActive(false);
         }else{
