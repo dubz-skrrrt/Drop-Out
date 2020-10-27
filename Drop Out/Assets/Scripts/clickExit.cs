@@ -8,12 +8,8 @@ public class clickExit : MonoBehaviour
     public void QuitGame()
     {
         Debug.Log("Quit");
+        SoundManager.PlaySound("Byebye");
         Application.Quit();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
