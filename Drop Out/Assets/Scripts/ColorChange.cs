@@ -47,16 +47,16 @@ public class ColorChange : MonoBehaviour
             }
         if (startTimer){
             Debug.Log("Start Time:" +startTimer);
-            if (timer > 10f){
+            if (timer > 20f){
             answer = true;
             startTimer = false;
             }
         }
 
-        if (timer > 12f){
+        if (timer > 22f){
             finalScript.activePlat = false;
         }
-        if (timer > 15f){
+        if (timer > 25f){
             finalScript.activePlat = true;
         }
         
