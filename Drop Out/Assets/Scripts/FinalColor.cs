@@ -11,8 +11,9 @@ public class FinalColor : MonoBehaviour
      public bool activePlat;
      public bool revert;
      public int finalColor;
-     private bool activateMe;
+     public bool activateMe;
      public bool restart;
+     public bool allActive;
     void Start()
     {
         //colorScript = gameObject.GetComponent<ColorChange>();
@@ -28,29 +29,41 @@ public class FinalColor : MonoBehaviour
 
     void Update(){
         if (revert == false){
-            Debug.Log(revert);
             randomFinalColor();
-            //activateMe = false;
             revert = true;
+        }
+        if (restart == true){
+            activateMe = false;
+            restart = false;
+            allActive = false;
+            
         }
         Debug.Log("Activated:" + activateMe);
         if (activateMe){
             foreach(GameObject plat in platforms){
+                if (allActive == true){
+                    //Debug.Log(plat.name);
+                    restart = true;
+                    CurrentColor = finalColor;
+                    foreach (GameObject tvScreen in TVColor){
+                        tvScreen.GetComponent<Renderer>().material.color = colorScript.original;
+                    }
+                }
                 if (CurrentColor>=plat.GetComponent<ColorChange>().minColorRange && CurrentColor<plat.GetComponent<ColorChange>().maxColorRange && plat.activeSelf){
                     //plat.GetComponent<Renderer>().material.color = randColors[finalScript.CurrentColor];
                 }else{
-                    
+                    plat.GetComponent<ColorChange>().timer = 0.0f;
                     if (activePlat == false){
-                        plat.SetActive(false);
                         revert = false;
+                        plat.SetActive(false);
                     } 
                     else {
                         if (!plat.activeSelf){
                             plat.SetActive(true);
-                            restart = true;
-
+                            allActive =true;
+                            plat.GetComponent<ColorChange>().startTimer = true;
                         }
-                        // CurrentColor = finalColor;
+                        
                     }
                 }
             }
@@ -59,11 +72,10 @@ public class FinalColor : MonoBehaviour
     }
      public void FinalAnswer()
     {
-        Debug.Log(CurrentColor);
         foreach (GameObject cube in TVColor){
             cube.GetComponent<Renderer>().material.color = colorScript.randColors[CurrentColor];
         }
-        colorScript.answer = false;
+        // colorScript.answer = false;
         activateMe = true;
        //CorrectPlatform();
         
