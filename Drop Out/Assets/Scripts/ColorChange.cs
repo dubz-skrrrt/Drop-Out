@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class ColorChange : MonoBehaviour
 {
-    
-    public float activeTimer = 0f;
     private float timeSinceChange = 0f;
-    private Color original;
+    public Color original;
     public GameObject objChangeColor;
     public Color[] randColors = new Color[12];
     public float timeToChange = 0.1f;
@@ -34,54 +32,48 @@ public class ColorChange : MonoBehaviour
         randColors[11] = Color.black;
         answer = false;
         timer = 0.0f;
-        activeTimer = 0.0f;
         startTimer = true;
         finalScript.activePlat = true;
-        
+        finalScript.restart = false;
     }
 
     void Update(){
         //Debug.Log(timer);
         timer += Time.deltaTime;
-        
+        Debug.Log("restarting" + finalScript.allActive);
+        if (finalScript.allActive && objChangeColor.activeSelf){
+            startTimer = true;
+            objChangeColor.GetComponent<ColorChange>().timer = 0.0f;
+            }
         if (startTimer){
+            Debug.Log("Start Time:" +startTimer);
             if (timer > 10f){
             answer = true;
             startTimer = false;
             }
-            if (finalScript.restart){
-                Debug.Log(finalScript.restart);
-                timer = 0.0f;
-            }
         }
-        //Debug.Log(activeTimer);
-        //Debug.Log("it is: " + activePlat);
+
+        if (timer > 12f){
+            finalScript.activePlat = false;
+        }
+        if (timer > 15f){
+            finalScript.activePlat = true;
+        }
         
-        // if (activeTimer < 12f){         
-        //     activeTimer += 0.05f;
-        //     finalScript.activePlat = false;
-        // }else{
-        //     finalScript.activePlat = true;
-        //     activeTimer = 0.0f;
-        // }
-        // if (activeTimer > 15f){
-        //     activeTimer = 0.0f;
-        //     timer = 0.0f;
-        // }
-        
-        
+        Debug.Log("answer is "+ answer);
         if (answer == true){
             finalScript.FinalAnswer();
             objChangeColor.GetComponent<Renderer>().material.color = original;
             // finalScript.CorrectPlatform();
+            answer = false;
             
-        }else{
-            timeSinceChange += Time.deltaTime;
-            if (timeSinceChange >= timeToChange && startTimer == true){
-                randomColorChange();
-
-            }
         }
+        timeSinceChange += Time.deltaTime;
+        if (timeSinceChange >= timeToChange && startTimer == true){
+            randomColorChange();
+
+        }
+        
         
         
     }
@@ -89,7 +81,6 @@ public class ColorChange : MonoBehaviour
 
         int newColor = Random.Range(minColorRange, maxColorRange);
         objChangeColor.GetComponent<Renderer>().material.color = randColors[newColor];
-
         timeSinceChange = 0f;
     }
 

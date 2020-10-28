@@ -1083,6 +1083,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7706582262265243797, guid: 3266364e32767214ea3c3ebba1225ed8, type: 3}
+      propertyPath: turnSpeed
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 7706582262265243798, guid: 3266364e32767214ea3c3ebba1225ed8, type: 3}
       propertyPath: m_Name
       value: dropguy
@@ -2129,7 +2133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b147d823d30eac4db359d558e556d41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeTimer: 0
+  original: {r: 0, g: 0, b: 0, a: 0}
   objChangeColor: {fileID: 1306080075259776741}
   randColors:
   - {r: 0, g: 0, b: 0, a: 0}
@@ -2264,7 +2268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b147d823d30eac4db359d558e556d41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeTimer: 0
+  original: {r: 0, g: 0, b: 0, a: 0}
   objChangeColor: {fileID: 1869004960271355713}
   randColors:
   - {r: 0, g: 0, b: 0, a: 0}
@@ -2453,7 +2457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b147d823d30eac4db359d558e556d41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeTimer: 0
+  original: {r: 0, g: 0, b: 0, a: 0}
   objChangeColor: {fileID: 5820216907772756647}
   randColors:
   - {r: 0, g: 0, b: 0, a: 0}
@@ -2692,7 +2696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b147d823d30eac4db359d558e556d41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeTimer: 0
+  original: {r: 0, g: 0, b: 0, a: 0}
   objChangeColor: {fileID: 9022215873487188611}
   randColors:
   - {r: 0, g: 0, b: 0, a: 0}

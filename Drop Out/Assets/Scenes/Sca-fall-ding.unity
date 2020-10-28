@@ -20627,6 +20627,10 @@ PrefabInstance:
       propertyPath: canons.Array.data[2]
       value: 
       objectReference: {fileID: 655652499}
+    - target: {fileID: 7706582262265243797, guid: 3266364e32767214ea3c3ebba1225ed8, type: 3}
+      propertyPath: turnSpeed
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 7706582262265243798, guid: 3266364e32767214ea3c3ebba1225ed8, type: 3}
       propertyPath: m_Name
       value: dropguy
