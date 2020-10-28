@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     private bool onFloor = false;
     private float angularDrive;
     public GameObject[] canons;
+    public Camera cam;
     private void Start()
     {
         moving = true;
@@ -132,6 +133,13 @@ public class PlayerController : MonoBehaviour
                 rb.freezeRotation = true;
             }
     
+        }
+        if (col.gameObject.name == "CameraChangeCollider"){
+            Debug.Log("camera");
+            Vector3 rotationValue = new Vector3(-25, Camera.main.transform.eulerAngles.y, Camera.main.transform.eulerAngles.z);
+            cam.transform.eulerAngles = transform.eulerAngles - rotationValue;
+            //Camera.main.transform.eulerAngles = new Vector3(Camera.main.transform.eulerAngles.x  45, Camera.main.transform.eulerAngles.y, Camera.main.transform.eulerAngles.z);
+            Debug.Log(Camera.main.transform.eulerAngles.x +"Change");
         }
 
 
