@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 03c78b878eeab8041b6ff53d19409938
@@ -16,5 +13,5 @@ EditorBuildSettings:
     guid: 2922e40293df52e44bd6a7eda24f4f29
   - enabled: 1
     path: Assets/Scenes/The Pithole.unity
-    guid: 67f8b5548b35eae47b6e4e108b61f995
+    guid: 0ee750c9a217f5f4a9b91788300eb384
   m_configObjects: {}
