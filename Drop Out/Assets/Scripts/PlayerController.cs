@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     public bool moving;
     private Animator anim = null; 
-    private Rigidbody rb = null;
+    private Rigidbody rb;
     private Rigidbody[] rigBones = null;
 
     float inputX, inputY;
@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     private bool onFloor = false;
     private float angularDrive;
     public GameObject[] canons;
-    public Camera cam;
+    public bool cameraChangeAngle;
     private void Start()
     {
         moving = true;
@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour
         }
         isGrounded = true;
         Physics.IgnoreLayerCollision(10, 9, true);
+        cameraChangeAngle = false;
     }
 
     private void Update()
@@ -73,26 +74,25 @@ public class PlayerController : MonoBehaviour
             else if (Input.GetKey(KeyCode.D)){
                 transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime);
             }
-        
-        }else{
-
-        }
-        if (isGrounded){
-            if (Input.GetKeyDown(KeyCode.Space) && isGrounded){
-                SoundManager.PlaySound("Jumpsfx");
-                isjumping = true;
-                rb.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
-                anim.SetTrigger("Jump");
-                isGrounded = false;
-                
-                    
+            if (isGrounded){
+                if (Input.GetKeyDown(KeyCode.Space) && isGrounded){
+                    SoundManager.PlaySound("Jumpsfx");
+                    isjumping = true;
+                    Vector3 rigidB = rb.velocity;
+                    rigidB.y = jumpForce;
+                    rb.velocity = rigidB;
+                    //rb.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
+                    anim.SetTrigger("Jump");
+                    isGrounded = false;
+                }
             }
         }
+        
         
 //        Debug.Log(onFloor);
         if (onFloor){
             if (cjoint.angularXDrive.positionSpring >= 100 && cjoint.angularYZDrive.positionSpring >= 100){
-                Debug.Log("off");
+                
                 onFloor = false;
                 anim.enabled = true;
                 TurnOffRagdoll();   
@@ -105,7 +105,7 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter(Collision collision){
         isjumping = false;
         isGrounded = true;
-        Debug.Log("grounded");
+        
 
         if(collision.gameObject.tag == "ObstacleCourse")
         {
@@ -125,7 +125,7 @@ public class PlayerController : MonoBehaviour
     void OnTriggerEnter(Collider col){
         
          if (col.gameObject.tag == "CanonStart"){
-             Debug.Log("start");
+    
             foreach(GameObject Can in canons)
             {
                 Canon canScript = Can.GetComponent<Canon>();
@@ -135,11 +135,8 @@ public class PlayerController : MonoBehaviour
     
         }
         if (col.gameObject.name == "CameraChangeCollider"){
-            Debug.Log("camera");
-            Vector3 rotationValue = new Vector3(Camera.main.transform.rotation.x-25, Camera.main.transform.rotation.y, Camera.main.transform.rotation.z);
-            cam.transform.eulerAngles = transform.eulerAngles - rotationValue;
-            //Camera.main.transform.eulerAngles = new Vector3(Camera.main.transform.eulerAngles.x  45, Camera.main.transform.eulerAngles.y, Camera.main.transform.eulerAngles.z);
-            Debug.Log(Camera.main.transform.eulerAngles.x +"Change");
+            Debug.Log("Changed");
+            cameraChangeAngle = true;
         }
 
 

@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Sca-fall-ding.unity
     guid: 2922e40293df52e44bd6a7eda24f4f29
   - enabled: 1
-    path: Assets/Scenes/The Pithole.unity
+    path: Assets/Scenes/The PitholeDraft.unity
     guid: 0ee750c9a217f5f4a9b91788300eb384
   m_configObjects: {}

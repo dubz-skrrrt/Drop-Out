@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class MovingSlime : MonoBehaviour
 {
-    public float speedX = 0.01f;
+    public float speedX = 0.0f;
     public float speedY = 0.01f;
     private float curX;
     private float curY;
+    public float speed;
+    public float conveyorVelocity;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,20 @@ public class MovingSlime : MonoBehaviour
     {
         curX += Time.deltaTime * speedX;
         curY += Time.deltaTime * speedY;
-        GetComponent<Renderer>().material.SetTextureOffset("_MainTex", new Vector2(curX, curY));
+        GetComponent<Renderer>().material.SetTextureOffset("_MainTex", new Vector2(0, curY));
+    }
+
+    void OnCollisionStay(Collision other){
+        if (other.gameObject.tag == "Player"){
+            //return;
+            Debug.Log("moving");
+            conveyorVelocity = speed * Time.deltaTime;
+            other.gameObject.GetComponent<Rigidbody>().velocity = conveyorVelocity * transform.forward; 
+            //rigidbody.velocity = conveyorVelocity * transform.forward;
+        }
+
+        if (other.gameObject.tag == ""){
+            
+        }
     }
 }

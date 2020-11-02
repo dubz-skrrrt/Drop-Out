@@ -14,7 +14,7 @@ public class PlayerCamera : MonoBehaviour
 
     public bool rotateAroundPlayer = true;
     public float rotateSpeed = 5.0f;
-
+    public PlayerController playerControls;
     public Transform pivot;
     void Start()
     {
@@ -24,14 +24,22 @@ public class PlayerCamera : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
     }
+
     void LateUpdate()
     {
-
+        Debug.Log(playerControls.cameraChangeAngle);
         if (rotateAroundPlayer)
         {
             Quaternion turnAngle = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * rotateSpeed, Vector3.up);
 
             cameraOffset = turnAngle * cameraOffset;
+
+            if(playerControls.cameraChangeAngle){
+                Quaternion newAngle = transform.rotation;
+                turnAngle = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * rotateSpeed, (Vector3.up + Vector3.right *2));
+                cameraOffset = transform.position - playerTransform.position;
+                cameraOffset = turnAngle * cameraOffset;
+            }
         }
        Vector3 newPos = playerTransform.position + cameraOffset;
 

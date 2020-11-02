@@ -12,6 +12,8 @@ TagManager:
   - movingPlatforms
   - cubeColor
   - colorPlatforms
+  - Vehicle
+  - moving belt
   layers:
   - Default
   - TransparentFX
