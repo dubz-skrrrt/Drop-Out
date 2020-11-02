@@ -136,7 +136,7 @@ public class PlayerController : MonoBehaviour
         }
         if (col.gameObject.name == "CameraChangeCollider"){
             Debug.Log("camera");
-            Vector3 rotationValue = new Vector3(-25, Camera.main.transform.eulerAngles.y, Camera.main.transform.eulerAngles.z);
+            Vector3 rotationValue = new Vector3(Camera.main.transform.rotation.x-25, Camera.main.transform.rotation.y, Camera.main.transform.rotation.z);
             cam.transform.eulerAngles = transform.eulerAngles - rotationValue;
             //Camera.main.transform.eulerAngles = new Vector3(Camera.main.transform.eulerAngles.x  45, Camera.main.transform.eulerAngles.y, Camera.main.transform.eulerAngles.z);
             Debug.Log(Camera.main.transform.eulerAngles.x +"Change");
