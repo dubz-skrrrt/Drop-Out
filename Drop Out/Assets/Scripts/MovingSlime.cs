@@ -10,6 +10,7 @@ public class MovingSlime : MonoBehaviour
     private float curY;
     public float speed;
     public float conveyorVelocity;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,10 +33,6 @@ public class MovingSlime : MonoBehaviour
             conveyorVelocity = speed * Time.deltaTime;
             other.gameObject.GetComponent<Rigidbody>().velocity = conveyorVelocity * transform.forward; 
             //rigidbody.velocity = conveyorVelocity * transform.forward;
-        }
-
-        if (other.gameObject.tag == ""){
-            
         }
     }
 }

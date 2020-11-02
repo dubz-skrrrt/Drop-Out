@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     private float angularDrive;
     public GameObject[] canons;
     public bool cameraChangeAngle;
+    public Camera cam;
     private void Start()
     {
         moving = true;

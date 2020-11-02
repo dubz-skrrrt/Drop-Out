@@ -5,11 +5,11 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public Transform trans;
-    public float speed= 20f;
     public float range = 10f;
     private Vector3 spawnPoint;
     public GameObject canonStart;
     private Canon canonScript;
+    public float speedIncrease;
     void Start()
     {
         spawnPoint = trans.position;
@@ -17,12 +17,11 @@ public class Projectile : MonoBehaviour
 
         
     }
-
-    
     void Update()
     {
         if(canonScript.spawnStart){
-            trans.Translate(0, 0, speed*Time.deltaTime, Space.Self);
+            trans.Translate(0, 0, speedIncrease*Time.deltaTime, Space.Self);
+            
         } 
     }
 

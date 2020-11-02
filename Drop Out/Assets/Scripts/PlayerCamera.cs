@@ -35,10 +35,9 @@ public class PlayerCamera : MonoBehaviour
             cameraOffset = turnAngle * cameraOffset;
 
             if(playerControls.cameraChangeAngle){
-                Quaternion newAngle = transform.rotation;
-                turnAngle = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * rotateSpeed, (Vector3.up + Vector3.right *2));
-                cameraOffset = transform.position - playerTransform.position;
-                cameraOffset = turnAngle * cameraOffset;
+                Quaternion newAngle = Camera.main.transform.rotation;
+                newAngle.x = -25;
+                //cameraOffset = newAngle * cameraOffset;
             }
         }
        Vector3 newPos = playerTransform.position + cameraOffset;
