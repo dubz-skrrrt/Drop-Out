@@ -20109,7 +20109,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 40
   m_IsActive: 1
 --- !u!4 &2038355862
 Transform:
@@ -21243,21 +21243,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7113045266481494465, guid: b1ed5ce3bee2c474a8079fa602276dd1, type: 3}
+      propertyPath: m_Speed
+      value: 3.8
+      objectReference: {fileID: 0}
+    - target: {fileID: -7113045266481494465, guid: b1ed5ce3bee2c474a8079fa602276dd1, type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 222389885673041223, guid: b1ed5ce3bee2c474a8079fa602276dd1, type: 3}
       propertyPath: m_Name
       value: enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554836390364864617, guid: b1ed5ce3bee2c474a8079fa602276dd1, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 32.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554836390364864617, guid: b1ed5ce3bee2c474a8079fa602276dd1, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 16.28037
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554836390364864617, guid: b1ed5ce3bee2c474a8079fa602276dd1, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -40.10547
       objectReference: {fileID: 0}
     - target: {fileID: 4741457841308689385, guid: b1ed5ce3bee2c474a8079fa602276dd1, type: 3}
       propertyPath: goal
       value: 
       objectReference: {fileID: 1302741449}
+    - target: {fileID: 4741457841308689385, guid: b1ed5ce3bee2c474a8079fa602276dd1, type: 3}
+      propertyPath: jumpForce
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4940380505345740832, guid: b1ed5ce3bee2c474a8079fa602276dd1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 32.57
       objectReference: {fileID: 0}
     - target: {fileID: 4940380505345740832, guid: b1ed5ce3bee2c474a8079fa602276dd1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.164
+      value: 16.109
       objectReference: {fileID: 0}
     - target: {fileID: 4940380505345740832, guid: b1ed5ce3bee2c474a8079fa602276dd1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21725,6 +21749,7 @@ GameObject:
   - component: {fileID: 592664079235375969}
   - component: {fileID: 1929802416585989425}
   - component: {fileID: 3566390033200377357}
+  - component: {fileID: 3779745574294941036}
   m_Layer: 0
   m_Name: pCylinder1
   m_TagString: hitObstacles
@@ -21732,6 +21757,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!208 &3779745574294941036
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3779745574294941035}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 1.08, y: 3.34, z: 1.08}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 0
+  m_Center: {x: 1.08, y: 4.47, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &3889987309595350478
 GameObject:
   m_ObjectHideFlags: 0
