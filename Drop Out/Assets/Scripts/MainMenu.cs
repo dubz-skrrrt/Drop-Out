@@ -15,6 +15,6 @@ public class MainMenu : MonoBehaviour
         {
             PlayerName.playernamestr = "Player";
         }
-        SceneManager.LoadScene("Sca-fall-ding"); // loads game
+        SceneManager.LoadScene("RandomizerUI"); // loads randomizer scene
     }
 }

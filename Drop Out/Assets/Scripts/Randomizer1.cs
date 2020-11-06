@@ -84,7 +84,7 @@ public class Randomizer1 : MonoBehaviour
     IEnumerator Seconds1()
     {
         yield return new WaitForSeconds (6);
-        SceneManager.LoadScene("Try1");
+        SceneManager.LoadScene("Sca-fall-ding");
     }
     void Timer2()
     {
@@ -93,7 +93,7 @@ public class Randomizer1 : MonoBehaviour
     IEnumerator Seconds2()
     {
         yield return new WaitForSeconds (6);
-        SceneManager.LoadScene("Try2");
+        SceneManager.LoadScene("Wet Concrete");
         
     }
     void Timer3()
@@ -103,7 +103,7 @@ public class Randomizer1 : MonoBehaviour
     IEnumerator Seconds3()
     {
         yield return new WaitForSeconds (6);
-        SceneManager.LoadScene("Try3");
+        SceneManager.LoadScene("The Pithole");
     }
     void Timer4()
     {
@@ -112,7 +112,7 @@ public class Randomizer1 : MonoBehaviour
     IEnumerator Seconds4()
     {
         yield return new WaitForSeconds (6);
-        SceneManager.LoadScene("Try4");
+        SceneManager.LoadScene("Mortar Enemy");
     }
     void Timer5()
     {
@@ -121,7 +121,7 @@ public class Randomizer1 : MonoBehaviour
     IEnumerator Seconds5()
     {
         yield return new WaitForSeconds (6);
-        SceneManager.LoadScene("Try5");
+        SceneManager.LoadScene("Crash Course");
         
     }
     void Timer6()
@@ -131,7 +131,7 @@ public class Randomizer1 : MonoBehaviour
     IEnumerator Seconds6()
     {
         yield return new WaitForSeconds (6);
-        SceneManager.LoadScene("Try6");
+        SceneManager.LoadScene("Sky Scraper");
         
     }
 }
