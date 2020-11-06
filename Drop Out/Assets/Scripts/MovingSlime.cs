@@ -9,6 +9,7 @@ public class MovingSlime : MonoBehaviour
     private float curX;
     private float curY;
     public float speed;
+    private float projectileSpeed = 10;
     public float conveyorVelocity;
 
     // Start is called before the first frame update
@@ -33,6 +34,11 @@ public class MovingSlime : MonoBehaviour
             conveyorVelocity = speed * Time.deltaTime;
             other.gameObject.GetComponent<Rigidbody>().velocity = conveyorVelocity * transform.forward; 
             //rigidbody.velocity = conveyorVelocity * transform.forward;
+        }
+
+        if (other.gameObject.tag == "MortarProjectiles"){
+            conveyorVelocity = projectileSpeed;
+            other.gameObject.GetComponent<Rigidbody>().velocity = conveyorVelocity * transform.forward;
         }
     }
 }

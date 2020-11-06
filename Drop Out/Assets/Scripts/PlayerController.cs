@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public float turnSpeed;
     public float jumpForce;
+    private float fForce;
     public bool moving;
     private Animator anim = null; 
     private Rigidbody rb;
@@ -92,7 +93,7 @@ public class PlayerController : MonoBehaviour
         
 //        Debug.Log(onFloor);
         if (onFloor){
-            if (cjoint.angularXDrive.positionSpring >= 100 && cjoint.angularYZDrive.positionSpring >= 100){
+            if (cjoint.angularXDrive.positionSpring >= 50 && cjoint.angularYZDrive.positionSpring >= 50){
                 
                 onFloor = false;
                 anim.enabled = true;
@@ -114,10 +115,14 @@ public class PlayerController : MonoBehaviour
             
         }
 
-        if (collision.gameObject.name == "Pilar" || collision.gameObject.tag =="Cannonball"){
+        if (collision.gameObject.name == "Pilar" || collision.gameObject.tag =="Cannonball" || collision.gameObject.tag =="MortarProjectiles"){
             if (isjumping == false){
                 onFloor = true;  
                 TurnOnRagdoll();
+                fForce = 5;
+                var force = transform.position - collision.transform.position;
+                force.Normalize();
+                rb.AddForce(force *fForce, ForceMode.VelocityChange);
             }  
         }
        
@@ -155,11 +160,13 @@ public class PlayerController : MonoBehaviour
 
     private void TurnOnRagdoll()
     {
-
          foreach (Rigidbody r in rigBones){
             r.isKinematic = false;
             r.mass = 0;
             
+        }
+        for (int i = 0; i <boneColliders.Length; i++){
+            Physics.IgnoreCollision(capsulePlayer, boneColliders[i], false);
         }
         
         anim.enabled = false; 
