@@ -115,7 +115,7 @@ public class PlayerController : MonoBehaviour
             
         }
 
-        if (collision.gameObject.name == "Pilar" || collision.gameObject.tag =="Cannonball" || collision.gameObject.tag =="MortarProjectiles"){
+        if (collision.gameObject.name == "Pilar" || collision.gameObject.tag =="Cannonball" || collision.gameObject.tag =="MortarProjectiles" || collision.gameObject.tag =="hitObstacles"){
             if (isjumping == false){
                 onFloor = true;  
                 TurnOnRagdoll();

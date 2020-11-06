@@ -21,6 +21,7 @@ TagManager:
   - level1
   - level3
   - MortarProjectiles
+  - disappear
   layers:
   - Default
   - TransparentFX
