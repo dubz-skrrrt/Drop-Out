@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class MortarFireProjectile : MonoBehaviour
 {
-    public Rigidbody projectilePrefab;
+    public GameObject projectilePrefab;
     public Transform cannonTip;
     public float delaySeconds;
 
     void Start()
     {
         StartCoroutine("waitForSpawn");
+        projectilePrefab.GetComponent<Renderer>().enabled = false;
     }
 
     IEnumerator waitForSpawn()
@@ -18,11 +19,16 @@ public class MortarFireProjectile : MonoBehaviour
         while(true)
         {
             yield return new WaitForSeconds (delaySeconds);
+            float randomfireRange = Random.Range(40000, 60000);
+            // Rigidbody projectileInstance;
+            GameObject projectileInstance;
+            projectilePrefab.GetComponent<Renderer>().enabled = true;
+            projectileInstance = Instantiate(projectilePrefab, cannonTip.position, cannonTip.rotation);
+            projectileInstance.GetComponent<Rigidbody>().AddForce(cannonTip.forward * randomfireRange);
+            // projectileInstance.AddForce(cannonTip.forward * 50000);
 
-            Rigidbody projectileInstance;
-            projectileInstance = Instantiate(projectilePrefab, cannonTip.position, cannonTip.rotation) as Rigidbody;
-            projectileInstance.AddForce(cannonTip.forward * 1000);
             
         }
     }
+
 }
