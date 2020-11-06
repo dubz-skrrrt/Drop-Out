@@ -15,14 +15,17 @@ EditorBuildSettings:
     path: Assets/Scene/Sca-fall-ding.unity
     guid: 2922e40293df52e44bd6a7eda24f4f29
   - enabled: 1
+    path: Assets/Scene/Wet Concrete.unity
+    guid: 96ed82deb8f770040b524dee03411ab2
+  - enabled: 1
     path: Assets/Scene/The Pithole.unity
     guid: 224500cfcdb890e41b923deb9183d27c
   - enabled: 1
     path: Assets/Scene/Mortar Enemy.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scene/Wet Concrete.unity
-    guid: 96ed82deb8f770040b524dee03411ab2
+    path: Assets/Scene/Crash Course.unity
+    guid: fbf75c22d8897d2489911b9743099450
   - enabled: 1
     path: Assets/Scene/Sky Scraper.unity
     guid: 031bae0887a39f14e98688cedeba204d

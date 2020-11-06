@@ -23,6 +23,7 @@ public class MortarFireProjectile : MonoBehaviour
             // Rigidbody projectileInstance;
             GameObject projectileInstance;
             projectilePrefab.GetComponent<Renderer>().enabled = true;
+            SoundManager.PlaySound("Cannonsfx");
             projectileInstance = Instantiate(projectilePrefab, cannonTip.position, cannonTip.rotation);
             projectileInstance.GetComponent<Rigidbody>().AddForce(cannonTip.forward * randomfireRange);
             // projectileInstance.AddForce(cannonTip.forward * 50000);

@@ -28,6 +28,6 @@ public class PitholeFinish : MonoBehaviour
     IEnumerator DelayNextLevel()
     {
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("MainMenu"); // loads mainmenu [next level if build is completed]
+        SceneManager.LoadScene("RandomizerUI"); // loads mainmenu [next level if build is completed]
     }
 }
