@@ -9,7 +9,7 @@ public class Randomizer1 : MonoBehaviour
     public GameObject[] level;
     int n;
     public int qualifiedNumber;
-    private int rounds = 6;
+    private int rounds = 1;
     private void Start() {
         RandomLevel();
     }

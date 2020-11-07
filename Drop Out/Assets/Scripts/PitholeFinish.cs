@@ -8,7 +8,7 @@ public class PitholeFinish : MonoBehaviour
     private int remaining = 2;
     public int maxQualification;
     public Randomizer1 qualifyingRounds;
-
+    private int DropGuys;
     void Start(){
         qualifyingRounds.GameRound();
         maxQualification = qualifyingRounds.qualifiedNumber;
@@ -49,6 +49,7 @@ public class PitholeFinish : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("RandomizerUI"); // loads mainmenu [next level if build is completed]
+        DropGuys = qualified - 1;
     }
     IEnumerator ReturnToMenu()
     {

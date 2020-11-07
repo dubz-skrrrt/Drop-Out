@@ -9,6 +9,8 @@ public class FinishLine : MonoBehaviour
     public int qualified = 0;
     public int maxQualification;
     public Randomizer1 qualifyingRounds;
+
+    private int DropGuys;
     void Start(){
         qualifyingRounds.GameRound();
         maxQualification = qualifyingRounds.qualifiedNumber;
@@ -50,6 +52,7 @@ public class FinishLine : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("RandomizerUI"); // loads next level
+        DropGuys = qualified - 1;
     }
      IEnumerator ReturnToMenu()
     {
