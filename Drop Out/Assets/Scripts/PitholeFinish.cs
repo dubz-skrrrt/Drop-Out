@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PitholeFinish : MonoBehaviour
 {
-    private int remaining = 2;
+    private int remaining = 4;
     public int maxQualification;
     public Randomizer1 qualifyingRounds;
     private int DropGuys;
