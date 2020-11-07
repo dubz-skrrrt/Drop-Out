@@ -18,7 +18,7 @@ public class Randomizer1 : MonoBehaviour
     int timesMort = 0;
     int timesCrash = 0;
     int timesSky = 0;
-    private int rounds = 6;
+    public static int rounds = 2;
     private void Start() {
         if (n == 1 || n==5 || n==4){
             respawn = true;

@@ -17,6 +17,7 @@ public class FinishLine : MonoBehaviour
     }
     void OnTriggerEnter(Collider col)
     {
+        Debug.Log(Randomizer1.rounds);
         // if player or enemy collides with finish line
         if (col.gameObject.tag == "Player")
         {
@@ -29,6 +30,9 @@ public class FinishLine : MonoBehaviour
                 Debug.Log("WIPEOUT!");
                 Cursor.lockState = CursorLockMode.None;
                 StartCoroutine(DelayNextLevel());
+            }
+            if (Randomizer1.rounds == 1){
+                Debug.Log("End");
             }
             
         }

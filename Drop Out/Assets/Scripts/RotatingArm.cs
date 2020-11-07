@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class RotatingArm : MonoBehaviour
 {
-    private float speed = 0.8f;
+    private float speed = 50f;
 
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, speed, 0);
+        transform.Rotate(0, speed * Time.deltaTime, 0);
     }
 }
