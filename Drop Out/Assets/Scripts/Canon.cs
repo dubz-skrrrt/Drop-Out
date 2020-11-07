@@ -18,7 +18,6 @@ public class Canon : MonoBehaviour
    
     void Update()
     {
-        Debug.Log(spawnStart);
         if (spawnStart){
             if (Time.time>=lastFireTime+fireRate)
             {

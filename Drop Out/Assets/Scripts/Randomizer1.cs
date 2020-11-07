@@ -26,7 +26,7 @@ public class Randomizer1 : MonoBehaviour
         }
     }
     public void RandomLevel() {
-        n = Random.Range(1,3);
+        n = Random.Range(1,7);
         Debug.Log(n);
         
         if (timesScaf == 0){
@@ -155,7 +155,6 @@ public class Randomizer1 : MonoBehaviour
     {
         yield return new WaitForSeconds (6);
         SceneManager.LoadScene("Sca-fall-ding");
-        respawn = true;
     }
     void Timer2()
     {
@@ -166,7 +165,6 @@ public class Randomizer1 : MonoBehaviour
     {
         yield return new WaitForSeconds (6);
         SceneManager.LoadScene("Wet Concrete");
-        respawn = false;
         
     }
     void Timer3()
@@ -178,7 +176,6 @@ public class Randomizer1 : MonoBehaviour
     {
         yield return new WaitForSeconds (6);
         SceneManager.LoadScene("The Pithole");
-        respawn = false;
     }
     void Timer4()
     {
@@ -189,7 +186,7 @@ public class Randomizer1 : MonoBehaviour
     {
         yield return new WaitForSeconds (6);
         SceneManager.LoadScene("Mortar Enemy");
-        respawn = true;
+
     }
     void Timer5()
     {
@@ -200,7 +197,7 @@ public class Randomizer1 : MonoBehaviour
     {
         yield return new WaitForSeconds (6);
         SceneManager.LoadScene("Crash Course");
-        respawn = true;
+        
         
     }
     void Timer6()
@@ -212,7 +209,7 @@ public class Randomizer1 : MonoBehaviour
     {
         yield return new WaitForSeconds (6);
         SceneManager.LoadScene("Sky Scraper");
-        respawn = false;
+       
         
     }
 
@@ -224,6 +221,12 @@ public class Randomizer1 : MonoBehaviour
         }else{
             Debug.Log(rounds + " <");
             qualifiedNumber = 1;
+        }
+    }
+
+    public void respawnBool(){
+        if (n == 1 || n==5 || n==4){
+            respawn = true;
         }
     }
 }

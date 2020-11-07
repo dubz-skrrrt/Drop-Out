@@ -21587,6 +21587,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f85b863cd6378641b1b74bc909f32fb, type: 3}
+--- !u!20 &3271485177988774764 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3271485177294018072, guid: 4f85b863cd6378641b1b74bc909f32fb, type: 3}
+  m_PrefabInstance: {fileID: 3271485177988774763}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3507740377037481323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21673,11 +21678,15 @@ PrefabInstance:
     - target: {fileID: 7706582262265243797, guid: 3266364e32767214ea3c3ebba1225ed8, type: 3}
       propertyPath: cam
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3271485177988774764}
     - target: {fileID: 7706582262265243798, guid: 3266364e32767214ea3c3ebba1225ed8, type: 3}
       propertyPath: m_Name
       value: dropguy
       objectReference: {fileID: 0}
+    - target: {fileID: 7706582262265244522, guid: 3266364e32767214ea3c3ebba1225ed8, type: 3}
+      propertyPath: respawning
+      value: 
+      objectReference: {fileID: 3964598766127616202, guid: 0048d645e137f7b47b0db82b056f5d11, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3266364e32767214ea3c3ebba1225ed8, type: 3}
 --- !u!23 &3566390033200377357

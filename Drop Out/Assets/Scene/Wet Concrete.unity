@@ -3311,17 +3311,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.065369, y: 1.0636771, z: 6.499708}
   m_Center: {x: 0.0169705, y: 0.9259405, z: -0.0041679144}
---- !u!114 &527849244 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7706582262265244522, guid: 3266364e32767214ea3c3ebba1225ed8, type: 3}
-  m_PrefabInstance: {fileID: 1845441286}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6a6a282732ced040a4cbabf0b9e2676, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &532992942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8207,7 +8196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedX: 0.02
   speedY: -0.02
-  dropGuy: {fileID: 527849244}
+  dropGuy: {fileID: 0}
   movingY: 0
 --- !u!1 &1457428299 stripped
 GameObject:
@@ -11078,6 +11067,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f85b863cd6378641b1b74bc909f32fb, type: 3}
+--- !u!20 &1828030373 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3271485177294018072, guid: 4f85b863cd6378641b1b74bc909f32fb, type: 3}
+  m_PrefabInstance: {fileID: 1828030372}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1828341909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11538,6 +11532,10 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: -0.000027179714
       objectReference: {fileID: 0}
+    - target: {fileID: 7706582262265243797, guid: 3266364e32767214ea3c3ebba1225ed8, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1828030373}
     - target: {fileID: 7706582262265244522, guid: 3266364e32767214ea3c3ebba1225ed8, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -11545,7 +11543,7 @@ PrefabInstance:
     - target: {fileID: 7706582262265244522, guid: 3266364e32767214ea3c3ebba1225ed8, type: 3}
       propertyPath: respawning
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3964598766127616202, guid: 0048d645e137f7b47b0db82b056f5d11, type: 3}
     - target: {fileID: 8809657368269240657, guid: 3266364e32767214ea3c3ebba1225ed8, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.0000004304995
@@ -11570,7 +11568,8 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: -0.000009515207
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7706582262265244522, guid: 3266364e32767214ea3c3ebba1225ed8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3266364e32767214ea3c3ebba1225ed8, type: 3}
 --- !u!1001 &1851327724
 PrefabInstance:
