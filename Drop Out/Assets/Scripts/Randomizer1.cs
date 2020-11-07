@@ -148,7 +148,7 @@ public class Randomizer1 : MonoBehaviour
 
         if (rounds > 1){
             Debug.Log(rounds + " >");
-            qualifiedNumber = 2;
+            qualifiedNumber = 1;
         }else{
             Debug.Log(rounds + " <");
             qualifiedNumber = 1;

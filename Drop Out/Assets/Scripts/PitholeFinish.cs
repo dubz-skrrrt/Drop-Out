@@ -49,7 +49,7 @@ public class PitholeFinish : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("RandomizerUI"); // loads mainmenu [next level if build is completed]
-        DropGuys = qualified - 1;
+        DropGuys = remaining - 1;
     }
     IEnumerator ReturnToMenu()
     {
