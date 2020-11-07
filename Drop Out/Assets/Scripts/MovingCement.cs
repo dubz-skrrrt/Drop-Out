@@ -48,12 +48,12 @@ public class MovingCement : MonoBehaviour
             dropGuy.dropguy.SetActive(false);
             SoundManager.PlaySound("Byebye");
             Debug.Log("Eliminated");
-            StartCoroutine(DelayReturnMenu());
+            StartCoroutine(ReturnToMenu());
             
         }
     }
 
-    IEnumerator DelayReturnMenu()
+    IEnumerator ReturnToMenu()
     {
         yield return new WaitForSeconds(2f);
 
