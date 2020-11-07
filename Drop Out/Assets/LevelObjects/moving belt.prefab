@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1707376121649428983}
   - component: {fileID: 1707376121649428982}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: moving belt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707376121649428981}
-  m_LocalRotation: {x: 0.00010614096, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.00010467471, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.009, y: -0.08, z: -0.004}
-  m_LocalScale: {x: 0.884824, y: 1.1681055, z: 0.97893554}
+  m_LocalScale: {x: 2.4926035, y: 0.04098298, z: 4.4849524}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 21.437, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.012, y: 0, z: 0}
 --- !u!33 &1707376121649428977
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -109,4 +109,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedX: 0
-  speedY: 0.03
+  speedY: 0.5
+  speed: 115
+  conveyorVelocity: 0

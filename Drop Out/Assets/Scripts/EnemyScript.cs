@@ -6,16 +6,21 @@ using UnityEngine.AI;
 public class EnemyScript : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float jumpForce;
     public Transform goal;
+    public bool isJumping;
     private Rigidbody rb;
     private Animator anim;
     private NavMeshAgent agent;
     public PlayerController playerScript;
     void Start()
     {
+<<<<<<< HEAD
+        isJumping = false;
+
+=======
         goal = GameObject.Find("FinishLine").GetComponent<Transform>();
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+>>>>>>> a556026d316c5f47ac02b58acaf2dd26b12ace3f
         agent = GetComponent<NavMeshAgent>();
         agent.destination = goal.position;
 
@@ -27,12 +32,19 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        anim.SetBool("Running", true);
-        if (agent.isOnOffMeshLink){
-            Vector3 rbVel = rb.velocity;
-            rbVel.y = jumpForce;
-            rb.velocity = rbVel;
+        if(!isJumping){
+            anim.SetBool("Running", true);
+        }
+        else{
+            anim.SetBool("Running", false);
+        }
+
+        if (agent.isOnOffMeshLink && !isJumping){
             anim.SetTrigger("Jump");
+            isJumping = true;
+        }
+        else{
+            isJumping = false;
         }
     }
     void OnTriggerEnter(Collider col){
@@ -47,5 +59,9 @@ public class EnemyScript : MonoBehaviour
             }
     
         }
+    }
+
+    void UpdateWaypoint(){
+        
     }
 }
