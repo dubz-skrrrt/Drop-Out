@@ -3311,6 +3311,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.065369, y: 1.0636771, z: 6.499708}
   m_Center: {x: 0.0169705, y: 0.9259405, z: -0.0041679144}
+--- !u!114 &527849244 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7706582262265244522, guid: 3266364e32767214ea3c3ebba1225ed8, type: 3}
+  m_PrefabInstance: {fileID: 1845441286}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6a6a282732ced040a4cbabf0b9e2676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &532992942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7588,6 +7599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedX: 0.01
   speedY: -0.01
+  dropGuy: {fileID: 0}
   movingY: 0
 --- !u!1001 &1339592750
 PrefabInstance:
@@ -8192,6 +8204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedX: 0.02
   speedY: -0.02
+  dropGuy: {fileID: 527849244}
   movingY: 0
 --- !u!1 &1457428299 stripped
 GameObject:
@@ -11288,6 +11301,10 @@ PrefabInstance:
     - target: {fileID: 449840012934377504, guid: 3266364e32767214ea3c3ebba1225ed8, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 729177689048196090, guid: 3266364e32767214ea3c3ebba1225ed8, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 969953661629606554, guid: 3266364e32767214ea3c3ebba1225ed8, type: 3}
       propertyPath: m_Name

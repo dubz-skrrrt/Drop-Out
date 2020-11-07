@@ -7,6 +7,7 @@ public class MovingCement : MonoBehaviour
 {
     public float speedX = 0.01f;
     public float speedY = 0.01f;
+    public test dropGuy;
     
     private float curX;
     private float curY;
@@ -47,7 +48,7 @@ public class MovingCement : MonoBehaviour
             SoundManager.PlaySound("Byebye");
             Debug.Log("Eliminated");
             StartCoroutine(DelayReturnMenu());
-           // dropguy.GetComponentInChildren<Renderer>().enabled = false;
+            //dropGuy.dropguy.SetActive(false);
         }
     }
 
@@ -56,6 +57,7 @@ public class MovingCement : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         SceneManager.LoadScene("MainMenu"); // returns to main menu
+        //dropGuy.dropguy.SetActive(true);
     }
 
     
