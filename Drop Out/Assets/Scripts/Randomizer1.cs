@@ -9,10 +9,9 @@ public class Randomizer1 : MonoBehaviour
     public GameObject[] level;
     int n;
     public int qualifiedNumber;
-    private int rounds;
+    private int rounds = 6;
     private void Start() {
         RandomLevel();
-        rounds = 6;
     }
     public void RandomLevel() {
         n = Random.Range(1,7);
@@ -147,10 +146,11 @@ public class Randomizer1 : MonoBehaviour
 
     public void GameRound(){
 
-        if (rounds > 2){
-            Debug.Log(rounds);
+        if (rounds > 1){
+            Debug.Log(rounds + " >");
             qualifiedNumber = 2;
         }else{
+            Debug.Log(rounds + " <");
             qualifiedNumber = 1;
         }
     }
