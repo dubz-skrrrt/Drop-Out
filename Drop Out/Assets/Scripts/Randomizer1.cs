@@ -15,15 +15,13 @@ public class Randomizer1 : MonoBehaviour
     int timesScaf = 0;
     int timesWet = 0;
     int timesPit = 0;
+    int timesMort = 0;
+    int timesCrash = 0;
+    int timesSky = 0;
     private int rounds = 6;
     private void Start() {
         RandomLevel();
 
-    }
-    public void Update() {
-        if(Input.GetKey(KeyCode.C)){
-            RandomLevel();
-        }
     }
     public void RandomLevel() {
         n = Random.Range(1,7);
@@ -52,7 +50,7 @@ public class Randomizer1 : MonoBehaviour
             level[3].SetActive(false);
             level[4].SetActive(false);
             level[5].SetActive(false);
-            n = Random.Range(1,3);
+            n = Random.Range(1,7);
             }
         }
 
@@ -79,7 +77,7 @@ public class Randomizer1 : MonoBehaviour
             level[4].SetActive(false);
             level[5].SetActive(false);
             Debug.Log("Times Random: "+timesWet);
-            n = Random.Range(1,3);
+            n = Random.Range(1,7);
             }
         }
         
@@ -108,10 +106,96 @@ public class Randomizer1 : MonoBehaviour
             level[4].SetActive(false);
             level[5].SetActive(false);
             Debug.Log("Times Random: "+timesPit);
-            n = Random.Range(1,3);
-        }
+            n = Random.Range(1,7);
+            }
         }
         
+
+        if (timesMort == 0){
+            if(n == 4)
+            {
+                level[0].SetActive(true);
+                level[1].SetActive(false);
+                level[2].SetActive(false);
+                level[3].SetActive(false);
+                level[4].SetActive(false);
+                level[5].SetActive(false);
+                timesMort = timesMort + 1;
+                Debug.Log("Times: "+timesMort);
+                Timer1();
+            }
+        }
+        else{
+            if (timesMort == 1){
+            Debug.Log("Times Random: "+timesMort);
+            level[1].SetActive(true);
+            level[1].SetActive(false);
+            level[2].SetActive(false);
+            level[3].SetActive(false);
+            level[4].SetActive(false);
+            level[5].SetActive(false);
+            n = Random.Range(1,7);
+            }
+        }
+
+        if (timesCrash == 0){
+            if(n == 5)
+            {
+                level[0].SetActive(false);
+                level[1].SetActive(true);
+                level[2].SetActive(false);
+                level[3].SetActive(false);
+                level[4].SetActive(false);
+                level[5].SetActive(false);
+                timesCrash = timesCrash + 1;
+                Debug.Log("Times: "+timesCrash);
+                Timer2();
+            }
+        } 
+        else{
+            if (timesCrash == 1){
+            level[0].SetActive(false);
+            level[1].SetActive(true);
+            level[2].SetActive(false);
+            level[3].SetActive(false);
+            level[4].SetActive(false);
+            level[5].SetActive(false);
+            Debug.Log("Times Random: "+timesCrash);
+            n = Random.Range(1,7);
+            }
+        }
+        
+        
+        
+        if (timesSky == 0){
+            if(n == 6)
+            {
+                level[0].SetActive(false);
+                level[1].SetActive(false);
+                level[2].SetActive(true);
+                level[3].SetActive(false);
+                level[4].SetActive(false);
+                level[5].SetActive(false);
+                timesSky = timesSky + 1;
+                Debug.Log("Times: "+timesSky);
+                Timer3();
+            }
+        } 
+        else{
+            if (timesSky == 1){
+            level[0].SetActive(false);
+            level[1].SetActive(false);
+            level[2].SetActive(false);
+            level[3].SetActive(false);
+            level[4].SetActive(false);
+            level[5].SetActive(false);
+            Debug.Log("Times Random: "+timesSky);
+            n = Random.Range(1,7);
+            }
+        }
+
+
+
         if(n == 4)
         {
             level[0].SetActive(false);
