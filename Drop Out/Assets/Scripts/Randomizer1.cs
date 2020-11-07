@@ -12,7 +12,6 @@ public class Randomizer1 : MonoBehaviour
     int n;
     public bool respawn;
     public int qualifiedNumber;
-    private int rounds = 1;
     int timesScaf = 0;
     int timesWet = 0;
     int timesPit = 0;
