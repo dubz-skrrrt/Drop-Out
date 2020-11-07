@@ -16,7 +16,7 @@ public class test : MonoBehaviour
             
             respawnPoint = GameObject.Find("RespawnPoint").transform;
         }
-        respawnPoint = GameObject.Find("RespawnPoint").transform;
+        //respawnPoint = GameObject.Find("RespawnPoint").transform;
         
     }
 
