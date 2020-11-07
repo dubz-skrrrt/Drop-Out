@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MovingCement : MonoBehaviour
 {
@@ -26,4 +27,25 @@ public class MovingCement : MonoBehaviour
         GetComponent<Renderer>().material.SetTextureOffset("_MainTex", new Vector2(curX, curY));
         transform.Translate((Vector3.up * movingY *Time.deltaTime));
     }
+
+    void OnCollisionEnter(Collision col)
+    {
+        // if player collides with rising cement (Wet Concrete Level)
+        if (col.gameObject.name == "dropguy")
+        {
+            SoundManager.PlaySound("Byebye");
+            Debug.Log("Eliminated");
+            StartCoroutine(DelayReturnMenu());
+           // dropguy.GetComponentInChildren<Renderer>().enabled = false;
+        }
+    }
+
+    IEnumerator DelayReturnMenu()
+    {
+        yield return new WaitForSeconds(2f);
+
+        SceneManager.LoadScene("MainMenu"); // returns to main menu
+    }
+
+    
 }
