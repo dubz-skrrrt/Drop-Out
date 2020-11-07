@@ -29,7 +29,7 @@ public class Randomizer1 : MonoBehaviour
 
     }
     public void RandomLevel() {
-        n = Random.Range(1,2);
+        n = Random.Range(1,7);
         Debug.Log(n);
         
         if (timesScaf == 0){
