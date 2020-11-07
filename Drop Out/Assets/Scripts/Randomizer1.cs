@@ -20,11 +20,16 @@ public class Randomizer1 : MonoBehaviour
     int timesSky = 0;
     private int rounds = 6;
     private void Start() {
+        if (n == 1 || n==5 || n==4){
+            respawn = true;
+        }else{
+            respawn = false;
+        }
         RandomLevel();
 
     }
     public void RandomLevel() {
-        n = Random.Range(1,7);
+        n = Random.Range(1,2);
         Debug.Log(n);
         
         if (timesScaf == 0){
