@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PitholeFinish : MonoBehaviour
 {
-    private int remaining = 2;
+    private int remaining = 4;
     public int maxQualification;
     public Randomizer1 qualifyingRounds;
     private int DropGuys;
@@ -19,14 +19,9 @@ public class PitholeFinish : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             col.gameObject.SetActive(false);
-            remaining -= 1;
-            if (remaining == maxQualification)
-            {
-                SoundManager.PlaySound("Yipee");
-                Debug.Log("WIPEOUT!");
-                Cursor.lockState = CursorLockMode.None;
-                StartCoroutine(DelayNextLevel());
-            }
+            StartCoroutine(ReturnToMenu());
+            Cursor.lockState = CursorLockMode.None;
+            
             
         }
         if (col.gameObject.tag == "Enemy")
@@ -39,7 +34,7 @@ public class PitholeFinish : MonoBehaviour
                 //SoundManager.PlaySound("Yipee");
                 Debug.Log("WIPEOUT!");
                 Cursor.lockState = CursorLockMode.None;
-                StartCoroutine(ReturnToMenu());
+                StartCoroutine(DelayNextLevel());
             }
             
         }
@@ -47,6 +42,7 @@ public class PitholeFinish : MonoBehaviour
 
     IEnumerator DelayNextLevel()
     {
+        SoundManager.PlaySound("Yipee");
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("RandomizerUI"); // loads mainmenu [next level if build is completed]
         DropGuys = remaining - 1;

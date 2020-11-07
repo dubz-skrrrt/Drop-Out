@@ -39,7 +39,7 @@ public class FinishLine : MonoBehaviour
             if (qualified == maxQualification)
             {
                 //complete = true;
-                //SoundManager.PlaySound("Yipee");
+                SoundManager.PlaySound("Yipee");
                 Debug.Log("WIPEOUT!");
                 Cursor.lockState = CursorLockMode.None;
                 StartCoroutine(ReturnToMenu());

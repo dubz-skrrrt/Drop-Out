@@ -7,14 +7,19 @@ public class Randomizer1 : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject[] level;
+    //public GameObject enemies;
+    public int DropGuys = 3;
     int n;
+    public bool respawn;
     public int qualifiedNumber;
     private int rounds = 1;
     int timesScaf = 0;
     int timesWet = 0;
     int timesPit = 0;
+    private int rounds = 6;
     private void Start() {
         RandomLevel();
+
     }
     public void Update() {
         if(Input.GetKey(KeyCode.C)){
@@ -151,6 +156,7 @@ public class Randomizer1 : MonoBehaviour
     {
         yield return new WaitForSeconds (6);
         SceneManager.LoadScene("Sca-fall-ding");
+        respawn = true;
     }
     void Timer2()
     {
@@ -161,6 +167,7 @@ public class Randomizer1 : MonoBehaviour
     {
         yield return new WaitForSeconds (6);
         SceneManager.LoadScene("Wet Concrete");
+        respawn = false;
         
     }
     void Timer3()
@@ -172,6 +179,7 @@ public class Randomizer1 : MonoBehaviour
     {
         yield return new WaitForSeconds (6);
         SceneManager.LoadScene("The Pithole");
+        respawn = false;
     }
     void Timer4()
     {
@@ -182,6 +190,7 @@ public class Randomizer1 : MonoBehaviour
     {
         yield return new WaitForSeconds (6);
         SceneManager.LoadScene("Mortar Enemy");
+        respawn = true;
     }
     void Timer5()
     {
@@ -192,6 +201,7 @@ public class Randomizer1 : MonoBehaviour
     {
         yield return new WaitForSeconds (6);
         SceneManager.LoadScene("Crash Course");
+        respawn = true;
         
     }
     void Timer6()
@@ -203,6 +213,7 @@ public class Randomizer1 : MonoBehaviour
     {
         yield return new WaitForSeconds (6);
         SceneManager.LoadScene("Sky Scraper");
+        respawn = false;
         
     }
 
@@ -210,7 +221,7 @@ public class Randomizer1 : MonoBehaviour
 
         if (rounds > 1){
             Debug.Log(rounds + " >");
-            qualifiedNumber = 1;
+            qualifiedNumber = 2;
         }else{
             Debug.Log(rounds + " <");
             qualifiedNumber = 1;

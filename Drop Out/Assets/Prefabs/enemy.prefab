@@ -162,7 +162,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7497a0aa36242e45b94eb1f969c3205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpForce: 4
   goal: {fileID: 0}
+  playerScript: {fileID: 0}
 --- !u!114 &6624490907989682402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,6 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropguy: {fileID: 222389885673041223}
+  respawning: {fileID: 3964598766127616202, guid: 0048d645e137f7b47b0db82b056f5d11, type: 3}
 --- !u!195 &-7113045266481494465
 NavMeshAgent:
   m_ObjectHideFlags: 0

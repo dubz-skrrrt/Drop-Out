@@ -6,10 +6,14 @@ public class test : MonoBehaviour
 {
     public GameObject dropguy;
     private Transform respawnPoint;
-
+    public Randomizer1 respawning;
     void Start()
     {
-        respawnPoint = GameObject.Find("RespawnPoint").transform;
+        // respawning = GameObject.Find("FirstPanel").GetComponent<Randomizer1>();
+        if (respawning.respawn){
+            respawnPoint = GameObject.Find("RespawnPoint").transform;
+        }
+        
     }
 
     
