@@ -7,7 +7,7 @@ public class MovingCement : MonoBehaviour
 {
     public float speedX = 0.01f;
     public float speedY = 0.01f;
-    public test dropGuy;
+    //public GameObject dropGuy;
     
     private float curX;
     private float curY;
@@ -45,7 +45,7 @@ public class MovingCement : MonoBehaviour
         // if player collides with rising cement (Wet Concrete Level)
         if (col.gameObject.tag == "Player")
         {
-            dropGuy.dropguy.SetActive(false);
+            col.gameObject.SetActive(false);
             SoundManager.PlaySound("Byebye");
             Debug.Log("Eliminated");
             StartCoroutine(ReturnToMenu());
@@ -54,7 +54,7 @@ public class MovingCement : MonoBehaviour
 
         if (col.gameObject.tag == "Enemy")
         {
-            dropGuy.dropguy.SetActive(false);
+            col.gameObject.SetActive(false);
             SoundManager.PlaySound("Byebye");
             Debug.Log("Eliminated");
             StartCoroutine(ReturnToMenu());
