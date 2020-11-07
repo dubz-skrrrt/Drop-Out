@@ -8,6 +8,7 @@ public class Randomizer1 : MonoBehaviour
     // Start is called before the first frame update
     public GameObject[] level;
     int n;
+    public int qualifiedNumber;
     private int rounds;
     private void Start() {
         RandomLevel();
@@ -76,6 +77,7 @@ public class Randomizer1 : MonoBehaviour
             level[5].SetActive(true);
             Timer6();
         }
+        GameRound();
     }
         
         
@@ -141,5 +143,15 @@ public class Randomizer1 : MonoBehaviour
         yield return new WaitForSeconds (6);
         SceneManager.LoadScene("Sky Scraper");
         
+    }
+
+    public void GameRound(){
+
+        if (rounds > 2){
+            Debug.Log(rounds);
+            qualifiedNumber = 2;
+        }else{
+            qualifiedNumber = 1;
+        }
     }
 }

@@ -28901,6 +28901,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49fc7a44e7e98d64ba48bdf0933d8aae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxQualification: 0
+  qualifyingRounds: {fileID: 3964598766127616202, guid: 0048d645e137f7b47b0db82b056f5d11, type: 3}
 --- !u!1 &1560763674
 GameObject:
   m_ObjectHideFlags: 0
