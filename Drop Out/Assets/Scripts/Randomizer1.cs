@@ -10,7 +10,7 @@ public class Randomizer1 : MonoBehaviour
     //public GameObject enemies;
     public int DropGuys = 3;
     int n;
-    public bool respawn;
+    public static bool respawn;
     public int qualifiedNumber;
     int timesScaf = 0;
     int timesWet = 0;
@@ -306,7 +306,7 @@ public class Randomizer1 : MonoBehaviour
 
         if (rounds > 1){
             Debug.Log(rounds + " >");
-            qualifiedNumber = 2;
+            qualifiedNumber = 1;
         }else{
             Debug.Log(rounds + " <");
             qualifiedNumber = 1;

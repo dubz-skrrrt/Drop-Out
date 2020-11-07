@@ -9,13 +9,13 @@ public class test : MonoBehaviour
     public Randomizer1 respawning;
     void Start()
     {
-        respawning.respawnBool();
-        Debug.Log(respawning.respawn);
-        // respawning = GameObject.Find("FirstPanel").GetComponent<Randomizer1>();
-        if (respawning.respawn){
+        // respawning.respawnBool();
+        // Debug.Log(respawning.respawn);
+        // // respawning = GameObject.Find("FirstPanel").GetComponent<Randomizer1>();
+        // if (respawning.respawn){
             
-            respawnPoint = GameObject.Find("RespawnPoint").transform;
-        }
+        respawnPoint = GameObject.Find("RespawnPoint").transform;
+        // }
         //respawnPoint = GameObject.Find("RespawnPoint").transform;
         
     }
