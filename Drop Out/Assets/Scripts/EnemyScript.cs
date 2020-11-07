@@ -14,8 +14,13 @@ public class EnemyScript : MonoBehaviour
     public PlayerController playerScript;
     void Start()
     {
+<<<<<<< HEAD
         isJumping = false;
 
+=======
+        goal = GameObject.Find("FinishLine").GetComponent<Transform>();
+        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+>>>>>>> a556026d316c5f47ac02b58acaf2dd26b12ace3f
         agent = GetComponent<NavMeshAgent>();
         agent.destination = goal.position;
 

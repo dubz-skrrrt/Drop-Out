@@ -2291,7 +2291,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   qualified: 0
-  maxQualification: 1
+  maxQualification: 0
+  qualifyingRounds: {fileID: 3964598766127616202, guid: 0048d645e137f7b47b0db82b056f5d11, type: 3}
 --- !u!1 &817351284
 GameObject:
   m_ObjectHideFlags: 0
