@@ -51,6 +51,16 @@ public class MovingCement : MonoBehaviour
             StartCoroutine(ReturnToMenu());
             
         }
+
+        if (col.gameObject.tag == "Enemy")
+        {
+            dropGuy.dropguy.SetActive(false);
+            SoundManager.PlaySound("Byebye");
+            Debug.Log("Eliminated");
+            StartCoroutine(ReturnToMenu());
+            
+        }
+        
     }
 
     IEnumerator ReturnToMenu()

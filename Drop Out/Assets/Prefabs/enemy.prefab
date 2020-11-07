@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: -7113045266481494465}
   m_Layer: 9
   m_Name: enemy
-  m_TagString: Player
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,8 +162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7497a0aa36242e45b94eb1f969c3205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 4
   goal: {fileID: 0}
+  isJumping: 0
   playerScript: {fileID: 0}
 --- !u!114 &6624490907989682402
 MonoBehaviour:

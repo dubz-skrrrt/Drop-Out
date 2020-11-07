@@ -46,6 +46,7 @@ public class FinishLine : MonoBehaviour
             }
             
         }
+        
     }
 
     IEnumerator DelayNextLevel()
