@@ -10,43 +10,105 @@ public class Randomizer1 : MonoBehaviour
     int n;
     public int qualifiedNumber;
     private int rounds = 1;
+    int timesScaf = 0;
+    int timesWet = 0;
+    int timesPit = 0;
     private void Start() {
         RandomLevel();
     }
+    public void Update() {
+        if(Input.GetKey(KeyCode.C)){
+            RandomLevel();
+        }
+    }
     public void RandomLevel() {
-        n = Random.Range(1,7);
+        n = Random.Range(1,3);
         Debug.Log(n);
-        if(n == 1)
-        {
-            level[0].SetActive(true);
+        
+        if (timesScaf == 0){
+            if(n == 1)
+            {
+                level[0].SetActive(true);
+                level[1].SetActive(false);
+                level[2].SetActive(false);
+                level[3].SetActive(false);
+                level[4].SetActive(false);
+                level[5].SetActive(false);
+                timesScaf = timesScaf + 1;
+                Debug.Log("Times: "+timesScaf);
+                Timer1();
+            }
+        }
+        else{
+            if (timesScaf == 1){
+            Debug.Log("Times Random: "+timesScaf);
+            level[1].SetActive(true);
             level[1].SetActive(false);
             level[2].SetActive(false);
             level[3].SetActive(false);
             level[4].SetActive(false);
             level[5].SetActive(false);
-            Timer1();
+            n = Random.Range(1,3);
+            }
         }
-        if(n == 2)
-        {
+
+        if (timesWet == 0){
+            if(n == 2)
+            {
+                level[0].SetActive(false);
+                level[1].SetActive(true);
+                level[2].SetActive(false);
+                level[3].SetActive(false);
+                level[4].SetActive(false);
+                level[5].SetActive(false);
+                timesWet = timesWet + 1;
+                Debug.Log("Times: "+timesWet);
+                Timer2();
+            }
+        } 
+        else{
+            if (timesWet == 1){
             level[0].SetActive(false);
             level[1].SetActive(true);
             level[2].SetActive(false);
             level[3].SetActive(false);
             level[4].SetActive(false);
             level[5].SetActive(false);
-            Timer2();
+            Debug.Log("Times Random: "+timesWet);
+            n = Random.Range(1,3);
+            }
         }
-         if(n == 3)
-        {
+        
+        
+        
+        if (timesPit == 0){
+            if(n == 3)
+            {
+                level[0].SetActive(false);
+                level[1].SetActive(false);
+                level[2].SetActive(true);
+                level[3].SetActive(false);
+                level[4].SetActive(false);
+                level[5].SetActive(false);
+                timesPit = timesPit + 1;
+                Debug.Log("Times: "+timesPit);
+                Timer3();
+            }
+        } 
+        else{
+            if (timesPit == 1){
             level[0].SetActive(false);
             level[1].SetActive(false);
-            level[2].SetActive(true);
+            level[2].SetActive(false);
             level[3].SetActive(false);
             level[4].SetActive(false);
             level[5].SetActive(false);
-            Timer3();
+            Debug.Log("Times Random: "+timesPit);
+            n = Random.Range(1,3);
         }
-         if(n == 4)
+        }
+        
+        if(n == 4)
         {
             level[0].SetActive(false);
             level[1].SetActive(false);
