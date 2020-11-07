@@ -43,12 +43,13 @@ public class MovingCement : MonoBehaviour
     void OnCollisionEnter(Collision col)
     {
         // if player collides with rising cement (Wet Concrete Level)
-        if (col.gameObject.name == "dropguy")
+        if (col.gameObject.tag == "Player")
         {
+            dropGuy.dropguy.SetActive(false);
             SoundManager.PlaySound("Byebye");
             Debug.Log("Eliminated");
             StartCoroutine(DelayReturnMenu());
-            //dropGuy.dropguy.SetActive(false);
+            
         }
     }
 
@@ -57,7 +58,9 @@ public class MovingCement : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         SceneManager.LoadScene("MainMenu"); // returns to main menu
-        //dropGuy.dropguy.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        
     }
 
     
