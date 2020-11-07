@@ -15,6 +15,7 @@ public class PitholeFinish : MonoBehaviour
     }
     void OnTriggerEnter(Collider col)
     {
+        Debug.Log(Randomizer1.rounds);
         // if player or enemy collides with pithole
         if (col.gameObject.tag == "Player")
         {
@@ -28,6 +29,9 @@ public class PitholeFinish : MonoBehaviour
         {
             col.gameObject.SetActive(false);
             remaining -= 1;
+            if (Randomizer1.rounds == 1){
+                Debug.Log("End");
+            }
             if (remaining == maxQualification)
             {
                 //complete = true;
