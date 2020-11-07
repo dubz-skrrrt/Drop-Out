@@ -27,7 +27,7 @@ public class PlayerCamera : MonoBehaviour
 
     void LateUpdate()
     {
-        Debug.Log(playerControls.cameraChangeAngle);
+        //Debug.Log(playerControls.cameraChangeAngle);
         if (rotateAroundPlayer)
         {
             Quaternion turnAngle = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * rotateSpeed, Vector3.up);
