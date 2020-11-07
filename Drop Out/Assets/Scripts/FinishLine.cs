@@ -6,15 +6,16 @@ using UnityEngine.SceneManagement;
 public class FinishLine : MonoBehaviour
 {
     //private bool complete = false;
-    private int qualified = 0;
-    private int maxQualification = 1;
+    public int qualified = 0;
+    public int maxQualification;
 
     void OnTriggerEnter(Collider col)
     {
         // if player or enemy collides with finish line
         if (col.gameObject.tag == "Player" || col.gameObject.tag == "Enemy")
         {
-            qualified++;
+            col.gameObject.SetActive(false);
+            qualified += 1;
             if (qualified == maxQualification)
             {
                 //complete = true;

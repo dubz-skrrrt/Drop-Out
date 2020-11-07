@@ -6,14 +6,15 @@ using UnityEngine.SceneManagement;
 public class PitholeFinish : MonoBehaviour
 {
     private int remaining = 2;
-    private int maxQualification = 1;
+    public int maxQualification;
     
     void OnTriggerEnter(Collider col)
     {
         // if player or enemy collides with pithole
-        if (col.gameObject.tag == "Player")
+        if (col.gameObject.tag == "Player" || col.gameObject.tag == "Enemy")
         {
-            remaining--;
+            col.gameObject.SetActive(false);
+            remaining -= 1;
             if (remaining == maxQualification)
             {
                 SoundManager.PlaySound("Yipee");
