@@ -11,7 +11,7 @@ public class EnemyScript : MonoBehaviour
     private Rigidbody rb;
     private Animator anim;
     private NavMeshAgent agent;
-
+    public PlayerController playerScript;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -33,4 +33,16 @@ public class EnemyScript : MonoBehaviour
             anim.SetTrigger("Jump");
         }
     }
+    void OnTriggerEnter(Collider col){
+        
+         if (col.gameObject.tag == "CanonStart"){
+    
+            foreach(GameObject Can in playerScript.canons)
+            {
+                Canon canScript = Can.GetComponent<Canon>();
+                canScript.spawnStart = true;
+                rb.freezeRotation = true;
+            }
+    
+        }
 }

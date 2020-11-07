@@ -12,7 +12,7 @@ public class FinishLine : MonoBehaviour
     void OnTriggerEnter(Collider col)
     {
         // if player or enemy collides with finish line
-        if (col.gameObject.tag == "Player")
+        if (col.gameObject.tag == "Player" || col.gameObject.tag == "Enemy")
         {
             qualified++;
             if (qualified == maxQualification)

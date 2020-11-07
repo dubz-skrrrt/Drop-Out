@@ -8,8 +8,10 @@ public class Randomizer1 : MonoBehaviour
     // Start is called before the first frame update
     public GameObject[] level;
     int n;
+    private int rounds;
     private void Start() {
         RandomLevel();
+        rounds = 6;
     }
     public void RandomLevel() {
         n = Random.Range(1,7);
@@ -79,6 +81,7 @@ public class Randomizer1 : MonoBehaviour
         
     void Timer1()
     {
+        rounds -= 1;
         StartCoroutine (Seconds1());
     }
     IEnumerator Seconds1()
@@ -88,6 +91,7 @@ public class Randomizer1 : MonoBehaviour
     }
     void Timer2()
     {
+        rounds -= 1;
         StartCoroutine (Seconds2());
     }
     IEnumerator Seconds2()
@@ -98,6 +102,7 @@ public class Randomizer1 : MonoBehaviour
     }
     void Timer3()
     {
+        rounds -= 1;
         StartCoroutine (Seconds3());
     }
     IEnumerator Seconds3()
@@ -107,6 +112,7 @@ public class Randomizer1 : MonoBehaviour
     }
     void Timer4()
     {
+        rounds -= 1;
         StartCoroutine (Seconds4());
     }
     IEnumerator Seconds4()
@@ -116,6 +122,7 @@ public class Randomizer1 : MonoBehaviour
     }
     void Timer5()
     {
+        rounds -= 1;
         StartCoroutine (Seconds5());
     }
     IEnumerator Seconds5()
@@ -126,6 +133,7 @@ public class Randomizer1 : MonoBehaviour
     }
     void Timer6()
     {
+        rounds -= 1;
         StartCoroutine (Seconds6());
     }
     IEnumerator Seconds6()

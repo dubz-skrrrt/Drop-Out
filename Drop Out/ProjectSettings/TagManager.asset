@@ -23,6 +23,7 @@ TagManager:
   - MortarProjectiles
   - disappear
   - moveCubes
+  - Enemy
   layers:
   - Default
   - TransparentFX
