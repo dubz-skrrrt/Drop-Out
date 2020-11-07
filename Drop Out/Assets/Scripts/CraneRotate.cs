@@ -5,11 +5,11 @@ using UnityEngine;
 public class CraneRotate : MonoBehaviour
 {
     // Start is called before the first frame update
-    private float speed = 0.3f;
+    public float speed;
 
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, speed, 0);
+        transform.Rotate(0, speed * Time.deltaTime, 0);
     }
 }

@@ -9,11 +9,13 @@ public class MovingCement : MonoBehaviour
     
     private float curX;
     private float curY;
+    public float movingY;
     // Start is called before the first frame update
     void Start()
     {
         curX = GetComponent<Renderer>().material.mainTextureOffset.x;
         curY = GetComponent<Renderer>().material.mainTextureOffset.y;
+        movingY = 0.05f;
     }
 
     // Update is called once per frame
@@ -22,5 +24,6 @@ public class MovingCement : MonoBehaviour
         curX += Time.deltaTime * speedX;
         curY += Time.deltaTime * speedY;
         GetComponent<Renderer>().material.SetTextureOffset("_MainTex", new Vector2(curX, curY));
+        transform.Translate((Vector3.up * movingY *Time.deltaTime));
     }
 }
