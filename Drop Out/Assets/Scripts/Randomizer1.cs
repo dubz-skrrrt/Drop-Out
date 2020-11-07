@@ -70,6 +70,7 @@ public class Randomizer1 : MonoBehaviour
                 level[5].SetActive(false);
                 timesWet = timesWet + 1;
                 Debug.Log("Times: "+timesWet);
+                rounds -= 1;
                 Timer2();
             }
         } 
@@ -99,6 +100,7 @@ public class Randomizer1 : MonoBehaviour
                 level[5].SetActive(false);
                 timesPit = timesPit + 1;
                 Debug.Log("Times: "+timesPit);
+                rounds -= 1;
                 Timer3();
             }
         } 
@@ -127,6 +129,7 @@ public class Randomizer1 : MonoBehaviour
                 level[5].SetActive(false);
                 timesMort = timesMort + 1;
                 Debug.Log("Times: "+timesMort);
+                rounds -= 1;
                 Timer1();
             }
         }
@@ -154,6 +157,7 @@ public class Randomizer1 : MonoBehaviour
                 level[5].SetActive(false);
                 timesCrash = timesCrash + 1;
                 Debug.Log("Times: "+timesCrash);
+                rounds -= 1;
                 Timer2();
             }
         } 
@@ -166,6 +170,7 @@ public class Randomizer1 : MonoBehaviour
             level[4].SetActive(false);
             level[5].SetActive(false);
             Debug.Log("Times Random: "+timesCrash);
+            
             n = Random.Range(1,7);
             }
         }
@@ -183,6 +188,7 @@ public class Randomizer1 : MonoBehaviour
                 level[5].SetActive(false);
                 timesSky = timesSky + 1;
                 Debug.Log("Times: "+timesSky);
+                rounds -= 1;
                 Timer3();
             }
         } 
@@ -209,6 +215,7 @@ public class Randomizer1 : MonoBehaviour
             level[3].SetActive(true);
             level[4].SetActive(false);
             level[5].SetActive(false);
+            rounds -= 1;
             Timer4();
         }
         if(n == 5)
@@ -219,6 +226,7 @@ public class Randomizer1 : MonoBehaviour
             level[3].SetActive(false);
             level[4].SetActive(true);
             level[5].SetActive(false);
+            rounds -= 1;
             Timer5();
         }
         if(n == 6)
@@ -229,6 +237,7 @@ public class Randomizer1 : MonoBehaviour
             level[3].SetActive(false);
             level[4].SetActive(false);
             level[5].SetActive(true);
+            rounds -= 1;
             Timer6();
         }
         GameRound();
@@ -237,7 +246,7 @@ public class Randomizer1 : MonoBehaviour
         
     void Timer1()
     {
-        rounds -= 1;
+        
         StartCoroutine (Seconds1());
     }
     IEnumerator Seconds1()
@@ -247,7 +256,7 @@ public class Randomizer1 : MonoBehaviour
     }
     void Timer2()
     {
-        rounds -= 1;
+        
         StartCoroutine (Seconds2());
     }
     IEnumerator Seconds2()
@@ -258,7 +267,7 @@ public class Randomizer1 : MonoBehaviour
     }
     void Timer3()
     {
-        rounds -= 1;
+        
         StartCoroutine (Seconds3());
     }
     IEnumerator Seconds3()
@@ -268,7 +277,7 @@ public class Randomizer1 : MonoBehaviour
     }
     void Timer4()
     {
-        rounds -= 1;
+        
         StartCoroutine (Seconds4());
     }
     IEnumerator Seconds4()
@@ -279,7 +288,7 @@ public class Randomizer1 : MonoBehaviour
     }
     void Timer5()
     {
-        rounds -= 1;
+       
         StartCoroutine (Seconds5());
     }
     IEnumerator Seconds5()
@@ -291,6 +300,7 @@ public class Randomizer1 : MonoBehaviour
     }
     void Timer6()
     {
+        
         rounds -= 1;
         StartCoroutine (Seconds6());
     }
