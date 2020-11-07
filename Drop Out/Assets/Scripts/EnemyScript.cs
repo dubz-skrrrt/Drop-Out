@@ -16,6 +16,7 @@ public class EnemyScript : MonoBehaviour
     {
         goal = GameObject.Find("FinishLine").GetComponent<Transform>();
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+
         agent = GetComponent<NavMeshAgent>();
         agent.destination = goal.position;
 
