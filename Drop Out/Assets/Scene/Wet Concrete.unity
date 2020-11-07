@@ -190,6 +190,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: moving belt (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
 --- !u!4 &7994057 stripped
@@ -264,6 +272,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: moving belt (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
 --- !u!4 &23114319 stripped
@@ -337,6 +353,14 @@ PrefabInstance:
     - target: {fileID: 1707376121649428981, guid: f4e5d5db280047446b4144b830815747, type: 3}
       propertyPath: m_Name
       value: moving belt (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
@@ -941,6 +965,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: moving belt (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
 --- !u!4 &126473507 stripped
@@ -1393,6 +1425,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: moving belt (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
 --- !u!4 &168494643 stripped
@@ -1507,6 +1547,14 @@ PrefabInstance:
     - target: {fileID: 1707376121649428981, guid: f4e5d5db280047446b4144b830815747, type: 3}
       propertyPath: m_Name
       value: moving belt (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
@@ -1683,6 +1731,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: moving belt (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
 --- !u!4 &291041919 stripped
@@ -1825,6 +1881,14 @@ PrefabInstance:
     - target: {fileID: 1707376121649428981, guid: f4e5d5db280047446b4144b830815747, type: 3}
       propertyPath: m_Name
       value: moving belt (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
@@ -2199,6 +2263,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: moving belt (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
 --- !u!4 &389029912 stripped
@@ -2503,6 +2575,14 @@ PrefabInstance:
     - target: {fileID: 1707376121649428981, guid: f4e5d5db280047446b4144b830815747, type: 3}
       propertyPath: m_Name
       value: moving belt
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
@@ -2887,6 +2967,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: moving belt (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
 --- !u!4 &476109491 stripped
@@ -3073,6 +3161,14 @@ PrefabInstance:
     - target: {fileID: 1707376121649428981, guid: f4e5d5db280047446b4144b830815747, type: 3}
       propertyPath: m_Name
       value: moving belt (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
@@ -3341,6 +3437,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: moving belt (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
 --- !u!4 &550848641 stripped
@@ -3446,6 +3550,14 @@ PrefabInstance:
     - target: {fileID: 1707376121649428981, guid: f4e5d5db280047446b4144b830815747, type: 3}
       propertyPath: m_Name
       value: moving belt (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
@@ -3778,6 +3890,14 @@ PrefabInstance:
     - target: {fileID: 1707376121649428981, guid: f4e5d5db280047446b4144b830815747, type: 3}
       propertyPath: m_Name
       value: moving belt (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
@@ -4330,6 +4450,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: moving belt (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
 --- !u!4 &727074020 stripped
@@ -4468,6 +4596,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: moving belt (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
 --- !u!4 &752722208 stripped
@@ -4591,6 +4727,14 @@ PrefabInstance:
     - target: {fileID: 1707376121649428981, guid: f4e5d5db280047446b4144b830815747, type: 3}
       propertyPath: m_Name
       value: moving belt (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
@@ -5220,6 +5364,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: moving belt (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
 --- !u!4 &936201763 stripped
@@ -5293,6 +5445,14 @@ PrefabInstance:
     - target: {fileID: 1707376121649428981, guid: f4e5d5db280047446b4144b830815747, type: 3}
       propertyPath: m_Name
       value: moving belt (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
@@ -5752,6 +5912,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: moving belt (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
 --- !u!4 &1040539293 stripped
@@ -5825,6 +5993,14 @@ PrefabInstance:
     - target: {fileID: 1707376121649428981, guid: f4e5d5db280047446b4144b830815747, type: 3}
       propertyPath: m_Name
       value: moving belt (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
@@ -6159,6 +6335,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: moving belt (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
 --- !u!4 &1086409613 stripped
@@ -6441,6 +6625,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: moving belt (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
 --- !u!4 &1143207235 stripped
@@ -6514,6 +6706,14 @@ PrefabInstance:
     - target: {fileID: 1707376121649428981, guid: f4e5d5db280047446b4144b830815747, type: 3}
       propertyPath: m_Name
       value: moving belt (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
@@ -6882,6 +7082,14 @@ PrefabInstance:
     - target: {fileID: 1707376121649428981, guid: f4e5d5db280047446b4144b830815747, type: 3}
       propertyPath: m_Name
       value: moving belt (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
@@ -7860,6 +8068,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: moving belt (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
 --- !u!4 &1478436047 stripped
@@ -8169,6 +8385,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: moving belt (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
 --- !u!4 &1522333380 stripped
@@ -8242,6 +8466,14 @@ PrefabInstance:
     - target: {fileID: 1707376121649428981, guid: f4e5d5db280047446b4144b830815747, type: 3}
       propertyPath: m_Name
       value: moving belt (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
@@ -8462,6 +8694,14 @@ PrefabInstance:
     - target: {fileID: 1707376121649428981, guid: f4e5d5db280047446b4144b830815747, type: 3}
       propertyPath: m_Name
       value: moving belt (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
@@ -8714,6 +8954,14 @@ PrefabInstance:
     - target: {fileID: 1707376121649428981, guid: f4e5d5db280047446b4144b830815747, type: 3}
       propertyPath: m_Name
       value: moving belt (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
@@ -9889,6 +10137,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: moving belt (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
 --- !u!4 &1730212043 stripped
@@ -10340,6 +10596,14 @@ PrefabInstance:
     - target: {fileID: 1707376121649428981, guid: f4e5d5db280047446b4144b830815747, type: 3}
       propertyPath: m_Name
       value: moving belt (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
@@ -11039,6 +11303,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: moving belt (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
 --- !u!4 &1890333913 stripped
@@ -11113,6 +11385,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: moving belt (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
 --- !u!4 &1904003554 stripped
@@ -11186,6 +11466,14 @@ PrefabInstance:
     - target: {fileID: 1707376121649428981, guid: f4e5d5db280047446b4144b830815747, type: 3}
       propertyPath: m_Name
       value: moving belt (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
@@ -11666,6 +11954,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: moving belt (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
 --- !u!4 &2008128793 stripped
@@ -11853,6 +12149,14 @@ PrefabInstance:
     - target: {fileID: 1707376121649428981, guid: f4e5d5db280047446b4144b830815747, type: 3}
       propertyPath: m_Name
       value: moving belt (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
@@ -12264,6 +12568,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: moving belt (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
 --- !u!4 &2071105337 stripped
@@ -12337,6 +12649,14 @@ PrefabInstance:
     - target: {fileID: 1707376121649428981, guid: f4e5d5db280047446b4144b830815747, type: 3}
       propertyPath: m_Name
       value: moving belt (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
@@ -12572,6 +12892,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: moving belt (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
 --- !u!4 &2098225822 stripped
@@ -12718,6 +13046,14 @@ PrefabInstance:
     - target: {fileID: 1707376121649428981, guid: f4e5d5db280047446b4144b830815747, type: 3}
       propertyPath: m_Name
       value: moving belt (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707376121649428982, guid: f4e5d5db280047446b4144b830815747, type: 3}
+      propertyPath: speedY
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e5d5db280047446b4144b830815747, type: 3}
