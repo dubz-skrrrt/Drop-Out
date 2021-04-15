@@ -1,0 +1,7 @@
+# Ignore IDE Generated Directories
+
+# Visual Studio Code
+.vscode
+
+# IntelliJ IDE
+.idea
